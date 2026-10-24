@@ -1,151 +1,200 @@
 import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/button';
-import { FiCheckCircle, FiTrendingUp, FiCpu, FiShield, FiArrowRight } from 'react-icons/fi';
-import { SiNextdotjs, SiReact, SiTypescript, SiTailwindcss, SiNodedotjs, SiPython } from 'react-icons/si';
+import {
+  FiCheckCircle,
+  FiXCircle,
+  FiTrendingUp,
+  FiShield,
+  FiArrowRight,
+  FiAward,
+} from 'react-icons/fi';
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiPostgresql,
+} from 'react-icons/si';
 
 const techStacks = [
-  { name: 'Next.js App Router', icon: SiNextdotjs },
+  { name: 'Next.js 16 (App Router)', icon: SiNextdotjs },
   { name: 'React 19', icon: SiReact },
   { name: 'TypeScript', icon: SiTypescript },
   { name: 'Tailwind CSS v4', icon: SiTailwindcss },
-  { name: 'Node.js', icon: SiNodedotjs },
-  { name: 'Python / AI', icon: SiPython },
+  { name: 'Node.js Engine', icon: SiNodedotjs },
+  { name: 'PostgreSQL Database', icon: SiPostgresql },
 ];
 
 export function SocialProofSection() {
   return (
-    <section className="bg-[#F5F7FB] text-[#080B16] py-24 sm:py-32 relative overflow-hidden transition-colors">
+    <section className="bg-[#F5F7FB] text-[#080B16] py-24 sm:py-32 relative overflow-hidden transition-colors border-t border-slate-200/80">
       <Container>
         {/* Section Header */}
-        <div className="max-w-2xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-[#4F7CFF] text-xs font-semibold uppercase tracking-wider mb-3">
-            <FiCpu className="h-3.5 w-3.5" />
-            Proven Business Results
+        <div className="max-w-3xl mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-[#4F7CFF] text-xs font-bold uppercase tracking-wider">
+            <FiAward className="h-3.5 w-3.5" />
+            The Evoruno Standard
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#080B16] font-display">
-            Built for growth, engineered to win clients.
+            Why growing companies choose Evoruno over generic agencies.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
-            We don’t build generic, cookie-cutter templates. Every website and app we launch is engineered to load in the blink of an eye, build instant trust, and maximize customer conversions.
+          <p className="text-base sm:text-lg text-[#475569] leading-relaxed">
+            Most agencies sell slow, fragile template sites that burden your business with endless plugin breakages and vendor lock-in. We build bespoke software platforms engineered for speed, conversion, and long-term asset value.
           </p>
         </div>
 
-        {/* Bento Grid Layout (Direct Reference from Video Frame 3) */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
-          {/* Card 1: Clean Architecture Preview (4 cols) */}
-          <div className="md:col-span-12 lg:col-span-4 bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
-            <div className="space-y-4">
-              <div className="h-12 w-12 rounded-2xl bg-blue-50 text-[#4F7CFF] flex items-center justify-center text-xl font-bold">
+        {/* Bento Grid Layout (Bespoke Agency Level) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          {/* Card 1 (7 cols): The Comparison Matrix */}
+          <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF]">
+                  Clear Advantage
+                </span>
+                <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
+                  Zero Technical Debt
+                </span>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 font-display mb-6">
+                How We Compare
+              </h3>
+
+              {/* Comparison Rows */}
+              <div className="space-y-4 text-xs sm:text-sm">
+                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-center">
+                  <div className="sm:col-span-4 font-bold text-slate-700">Page Load Speed</div>
+                  <div className="sm:col-span-4 text-slate-500 flex items-center gap-1.5 line-through">
+                    <FiXCircle className="text-red-500 shrink-0" />
+                    4s – 7s (Slow templates)
+                  </div>
+                  <div className="sm:col-span-4 text-slate-900 font-bold flex items-center gap-1.5 text-emerald-700">
+                    <FiCheckCircle className="text-emerald-600 shrink-0" />
+                    &lt; 1.0s (Sub-Second RSC)
+                  </div>
+                </div>
+
+                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-center">
+                  <div className="sm:col-span-4 font-bold text-slate-700">Code & IP Ownership</div>
+                  <div className="sm:col-span-4 text-slate-500 flex items-center gap-1.5 line-through">
+                    <FiXCircle className="text-red-500 shrink-0" />
+                    Vendor Lock-in
+                  </div>
+                  <div className="sm:col-span-4 text-slate-900 font-bold flex items-center gap-1.5 text-emerald-700">
+                    <FiCheckCircle className="text-emerald-600 shrink-0" />
+                    100% Client Ownership
+                  </div>
+                </div>
+
+                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-center">
+                  <div className="sm:col-span-4 font-bold text-slate-700">Architecture</div>
+                  <div className="sm:col-span-4 text-slate-500 flex items-center gap-1.5 line-through">
+                    <FiXCircle className="text-red-500 shrink-0" />
+                    Bloated plugins & PHP
+                  </div>
+                  <div className="sm:col-span-4 text-slate-900 font-bold flex items-center gap-1.5 text-emerald-700">
+                    <FiCheckCircle className="text-emerald-600 shrink-0" />
+                    Next.js 16 + TypeScript
+                  </div>
+                </div>
+
+                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-center">
+                  <div className="sm:col-span-4 font-bold text-slate-700">Communication</div>
+                  <div className="sm:col-span-4 text-slate-500 flex items-center gap-1.5 line-through">
+                    <FiXCircle className="text-red-500 shrink-0" />
+                    Junior account reps
+                  </div>
+                  <div className="sm:col-span-4 text-slate-900 font-bold flex items-center gap-1.5 text-emerald-700">
+                    <FiCheckCircle className="text-emerald-600 shrink-0" />
+                    Direct Senior Engineers
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span>Standard for all client engagements</span>
+              <span className="font-semibold text-slate-800">No recurring hidden costs</span>
+            </div>
+          </div>
+
+          {/* Right Column (5 cols): Speed & Conversion (Electric Blue Card) */}
+          <div className="lg:col-span-5 flex flex-col gap-8 justify-between">
+            {/* Card 2: Electric Blue Speed Card */}
+            <div className="bg-[#1040FF] text-white rounded-3xl p-8 sm:p-10 shadow-xl shadow-blue-500/20 flex flex-col justify-between flex-1">
+              <div>
+                <div className="text-xs font-bold uppercase tracking-wider text-blue-200">
+                  Google Core Web Vitals
+                </div>
+                <div className="text-5xl sm:text-6xl font-black tracking-tight mt-2 font-display">
+                  100/100
+                </div>
+                <p className="text-sm text-blue-100 mt-4 leading-relaxed">
+                  Every 100 milliseconds shaved off load speed measurably boosts conversion. We eliminate bloat so your visitors stay engaged and buy.
+                </p>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-blue-400/30 flex items-center justify-between text-xs">
+                <span className="flex items-center gap-1.5 text-blue-100 font-medium">
+                  <FiTrendingUp className="h-4 w-4" />
+                  +142% Inbound Conversions
+                </span>
+                <Link href="/services/seo" className="text-white underline font-semibold hover:text-blue-100">
+                  SEO Details &rarr;
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 3: Production Reliability */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-md flex items-center justify-between gap-4">
+              <div className="space-y-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  Reliability SLA
+                </span>
+                <div className="text-3xl font-extrabold text-slate-900 font-display">99.99%</div>
+                <p className="text-xs text-slate-600">Continuous monitoring & zero server panics.</p>
+              </div>
+              <div className="h-12 w-12 rounded-2xl bg-blue-50 text-[#4F7CFF] flex items-center justify-center shrink-0">
                 <FiShield className="h-6 w-6" />
               </div>
-              <h3 className="text-2xl font-bold text-[#080B16] font-display">
-                Zero Technical Headaches
-              </h3>
-              <p className="text-sm text-[#64748B] leading-relaxed">
-                Clean, reliable software architecture that you truly own. No bloated WordPress plugins, no unexpected site crashes, and no recurring security panics.
-              </p>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <div className="text-3xl font-extrabold text-[#080B16]">100%</div>
-                <div className="text-xs text-[#64748B] mt-0.5 font-medium">Source Code Ownership</div>
-              </div>
-              <span className="h-8 w-8 rounded-full bg-green-50 text-green-600 flex items-center justify-center">
-                <FiCheckCircle className="h-4 w-4" />
-              </span>
-            </div>
-          </div>
-
-          {/* Card 2: Reliability & Testimonial Metric (4 cols) */}
-          <div className="md:col-span-12 lg:col-span-4 bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-[#64748B]">Commitment to Reliability</div>
-              <div className="text-5xl font-black text-[#080B16] tracking-tight mt-2 font-display">
-                99.99%
-              </div>
-              <p className="text-sm text-[#475569] mt-4 italic leading-relaxed">
-                &ldquo;Evoruno completely revamped our online presence. Our mobile customer inquiries more than doubled within the first month after going live.&rdquo;
-              </p>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-slate-100 flex items-center gap-3">
-              <div className="flex -space-x-2">
-                <div className="h-9 w-9 rounded-full bg-[#101629] text-white flex items-center justify-center text-xs font-bold border-2 border-white">
-                  EN
-                </div>
-                <div className="h-9 w-9 rounded-full bg-[#4F7CFF] text-white flex items-center justify-center text-xs font-bold border-2 border-white">
-                  ST
-                </div>
-                <div className="h-9 w-9 rounded-full bg-[#7C5CFC] text-white flex items-center justify-center text-xs font-bold border-2 border-white">
-                  FX
-                </div>
-              </div>
-              <div className="text-xs text-[#64748B]">
-                <strong className="text-[#080B16] block">Client Partnership</strong>
-                Continuous post-launch support
-              </div>
-            </div>
-          </div>
-
-          {/* Card 3: Deep Electric-Blue Highlight Card (4 cols) */}
-          <div className="md:col-span-12 lg:col-span-4 bg-[#1040FF] text-white rounded-3xl p-8 shadow-xl shadow-blue-500/20 flex flex-col justify-between">
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-blue-200">
-                Lightning Fast Speed
-              </div>
-              <div className="text-5xl sm:text-6xl font-black tracking-tight mt-2 font-display">
-                &lt; 1.0s
-              </div>
-              <p className="text-sm text-blue-100 mt-4 leading-relaxed">
-                Sub-second loading times mean your prospective clients never get tired of waiting. Faster pages directly drive higher Google rankings and more inquiries.
-              </p>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-blue-400/30 flex items-center justify-between">
-              <div className="text-xs font-medium text-blue-100 flex items-center gap-1.5">
-                <FiTrendingUp className="h-4 w-4" />
-                Lighthouse Grade: 100/100
-              </div>
-              <Link href="/services/seo" className="text-xs text-white underline hover:text-blue-100">
-                SEO Standards &rarr;
-              </Link>
             </div>
           </div>
         </div>
 
-        {/* Technology Marquee Strip */}
-        <div className="mt-16 pt-12 border-t border-slate-200/80">
-          <p className="text-xs font-semibold uppercase tracking-widest text-center text-[#64748B] mb-8">
-            Built on Industry-Standard Modern Technologies
+        {/* Enterprise Tech Stack Row */}
+        <div className="mt-16 pt-12 border-t border-slate-200">
+          <p className="text-xs font-bold uppercase tracking-widest text-center text-slate-500 mb-8">
+            Engineered on Modern, Future-Proof Technologies
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 items-center">
             {techStacks.map((tech) => {
               const Icon = tech.icon;
               return (
                 <div
                   key={tech.name}
-                  className="flex items-center justify-center gap-2.5 p-3.5 rounded-xl bg-white border border-slate-200/60 shadow-sm text-slate-700 hover:text-[#4F7CFF] hover:border-blue-200 transition-colors"
+                  className="flex items-center justify-center gap-2.5 p-4 rounded-2xl bg-white border border-slate-200 shadow-xs text-slate-800 hover:text-[#4F7CFF] hover:border-blue-300 transition-all text-xs font-semibold"
                 >
-                  <Icon className="h-5 w-5 shrink-0" />
-                  <span className="text-xs font-semibold">{tech.name}</span>
+                  <Icon className="h-4 w-4 shrink-0 text-[#4F7CFF]" />
+                  <span>{tech.name}</span>
                 </div>
               );
             })}
           </div>
         </div>
 
-        {/* Explore Platform CTA Button */}
-        <div className="mt-14 text-center">
+        {/* CTA */}
+        <div className="mt-12 text-center">
           <Link href="/services">
             <Button
               variant="outline"
               size="lg"
-              className="rounded-full border-slate-300 text-slate-800 hover:bg-slate-100"
+              className="rounded-full border-slate-300 text-slate-900 hover:bg-slate-100 font-semibold px-8"
             >
-              Explore Our Full Capabilities
+              Explore Full Engineering Capabilities
               <FiArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
