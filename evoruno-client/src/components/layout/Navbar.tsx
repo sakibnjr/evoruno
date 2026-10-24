@@ -37,7 +37,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 sm:px-6 lg:px-8">
+    <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 px-4 sm:px-6 lg:px-8 ${scrolled ? 'py-3' : 'py-5'}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Left: Brand Pill */}
         <div className="flex items-center">

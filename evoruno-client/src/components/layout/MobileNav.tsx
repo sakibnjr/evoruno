@@ -23,11 +23,6 @@ export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  // Close menu on route change
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
-
   // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
@@ -74,6 +69,7 @@ export function MobileNav() {
                   <Link
                     key={item.href}
                     href={item.href}
+                    onClick={() => setIsOpen(false)}
                     className={`flex items-center justify-between py-3 text-2xl font-semibold border-b border-white/5 transition-colors ${
                       isActive ? 'text-[#4F7CFF]' : 'text-white hover:text-[#4F7CFF]'
                     }`}

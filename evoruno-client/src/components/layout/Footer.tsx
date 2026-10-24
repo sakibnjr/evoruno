@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { Logo } from '@/components/branding/Logo';
 import { Container } from '@/components/layout/Container';
-import { FiArrowUpRight, FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import { FiArrowUpRight, FiMail, FiMapPin } from 'react-icons/fi';
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2026;
 
   return (
     <footer className="border-t border-white/10 bg-[#060810] text-[#A7B0C5] pt-16 pb-12">

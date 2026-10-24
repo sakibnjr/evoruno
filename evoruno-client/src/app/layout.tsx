@@ -56,6 +56,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { OrganizationJsonLd, WebSiteJsonLd } from '@/components/seo/JsonLd';
+
 export default function RootLayout({
   children,
 }: {
@@ -63,6 +65,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${plusJakarta.variable} ${inter.variable} dark scroll-smooth`}>
+      <head>
+        <OrganizationJsonLd />
+        <WebSiteJsonLd />
+      </head>
       <body className="min-h-screen bg-[#080B16] text-[#F5F7FF] font-sans antialiased flex flex-col selection:bg-[#4F7CFF]/30 selection:text-white">
         <Navbar />
         <main className="flex-1">{children}</main>

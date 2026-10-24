@@ -55,7 +55,7 @@ export function SolutionSection() {
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF]">
-                      0{index + 1} // Service
+                      0{index + 1} {'//'} Service
                     </span>
                     {isFeatured && (
                       <span className="px-2.5 py-0.5 rounded-full bg-[#4F7CFF]/20 text-[#4F7CFF] text-[10px] font-bold tracking-wider uppercase border border-[#4F7CFF]/30">
