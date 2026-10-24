@@ -35,10 +35,10 @@ const problems = [
 
 export function ProblemSection() {
   return (
-    <section className="bg-[#080B16] text-[#F5F7FF] py-24 sm:py-32 relative overflow-hidden">
+    <section className="bg-background text-foreground py-24 sm:py-32 relative overflow-hidden">
       {/* Background Subtle Ambient Glow */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-red-500/5 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#4F7CFF]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-[140px] pointer-events-none" />
 
       <Container>
         {/* Header */}
@@ -50,7 +50,7 @@ export function ProblemSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-display">
             Is an outdated digital presence costing you customers?
           </h2>
-          <p className="text-base sm:text-lg text-[#A7B0C5] leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Most business websites suffer from silent technical bottlenecks that turn away high-intent prospects before they ever get in touch.
           </p>
         </div>
@@ -76,14 +76,14 @@ export function ProblemSection() {
                     <Icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-[#A7B0C5] block mb-1">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground block mb-1">
                       {prob.tag}
                     </span>
                     <CardTitle className="text-xl sm:text-2xl font-bold text-white leading-snug">
                       {prob.title}
                     </CardTitle>
                   </div>
-                  <CardDescription className="text-sm text-[#A7B0C5] leading-relaxed">
+                  <CardDescription className="text-sm text-muted-foreground leading-relaxed">
                     {prob.description}
                   </CardDescription>
                 </CardHeader>

@@ -17,8 +17,8 @@ export default function ServicesPage() {
   return (
     <div className="relative overflow-hidden">
       {/* SECTION 1: DARK HERO */}
-      <section className="pt-32 pb-20 bg-[#080B16] relative overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#4F7CFF]/15 rounded-full blur-[160px] pointer-events-none" />
+      <section className="pt-32 pb-20 bg-background relative overflow-hidden">
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[160px] pointer-events-none" />
 
         <Container>
           <div className="max-w-3xl space-y-4">
@@ -29,7 +29,7 @@ export default function ServicesPage() {
             <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white font-display">
               Digital solutions engineered for measurable business growth.
             </h1>
-            <p className="text-base sm:text-lg text-[#A7B0C5] leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
               We help growing businesses eliminate slow load times, outdated code, and lost leads. From custom web platforms to native mobile apps and search visibility, everything we engineer is focused on customer acquisition and long-term ROI.
             </p>
           </div>
@@ -37,10 +37,10 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 2: LIGHT SERVICES DEEP DIVE */}
-      <section className="py-24 bg-[#F5F7FB] relative">
+      <section className="py-24 bg-light-section relative">
         <Container>
           <div className="max-w-2xl mb-16 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF] block">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary block">
               End-To-End Delivery
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-display">
@@ -61,19 +61,19 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 3: DARK CONVERSION BANNER */}
-      <section className="py-24 bg-[#080B16] relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#4F7CFF]/15 rounded-full blur-[140px] pointer-events-none" />
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/15 rounded-full blur-[140px] pointer-events-none" />
 
         <Container>
-          <div className="p-8 sm:p-14 rounded-3xl bg-gradient-to-r from-[#101629] to-[#172038] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left shadow-2xl relative z-10">
+          <div className="p-8 sm:p-14 rounded-3xl bg-gradient-to-r from-card to-muted border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left shadow-2xl relative z-10">
             <div className="space-y-3 max-w-xl">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#00E5FF]">
+              <span className="text-xs font-bold uppercase tracking-widest text-accent">
                 Free Initial Architecture Review
               </span>
               <h3 className="text-3xl sm:text-4xl font-bold text-white font-display">
                 Need advice on which approach fits your budget?
               </h3>
-              <p className="text-base text-[#A7B0C5] leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Send us a message or schedule a quick introductory session. We will review your current systems and recommend the most cost-effective path forward.
               </p>
             </div>

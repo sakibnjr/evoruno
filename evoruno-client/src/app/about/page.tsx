@@ -39,8 +39,8 @@ export default function AboutPage() {
   return (
     <div className="relative overflow-hidden">
       {/* SECTION 1: DARK HERO */}
-      <section className="pt-32 pb-20 bg-[#080B16] relative overflow-hidden">
-        <div className="absolute top-1/4 right-1/3 w-[500px] h-[500px] bg-[#4F7CFF]/15 rounded-full blur-[160px] pointer-events-none" />
+      <section className="pt-32 pb-20 bg-background relative overflow-hidden">
+        <div className="absolute top-1/4 right-1/3 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[160px] pointer-events-none" />
 
         <Container>
           <div className="max-w-3xl space-y-4">
@@ -48,7 +48,7 @@ export default function AboutPage() {
             <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white font-display">
               We help ambitious businesses outpace competition through technology.
             </h1>
-            <p className="text-base sm:text-lg text-[#A7B0C5] leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
               Evoruno was founded on a simple conviction: businesses deserve digital tools that are as fast, ambitious, and dependable as their own leadership. No bloated templates, no unnecessary overhead.
             </p>
           </div>
@@ -56,12 +56,12 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 2: LIGHT STORY & STANDARDS */}
-      <section className="py-24 bg-[#F5F7FB] relative">
+      <section className="py-24 bg-light-section relative">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: Narrative */}
             <div className="lg:col-span-6 space-y-6 text-slate-600 leading-relaxed text-base">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF] block">
+              <span className="text-xs font-bold uppercase tracking-widest text-primary block">
                 The Evoruno Difference
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-display">
@@ -86,8 +86,8 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 3: DARK CORE VALUES */}
-      <section className="py-24 bg-[#080B16] relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-[#7C5CFC]/15 rounded-full blur-[160px] pointer-events-none" />
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-secondary/15 rounded-full blur-[160px] pointer-events-none" />
 
         <Container>
           <div className="max-w-2xl mb-16 space-y-3">
@@ -95,7 +95,7 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white font-display">
               Principles that protect your technology investment
             </h2>
-            <p className="text-base text-[#A7B0C5]">
+            <p className="text-base text-muted-foreground">
               These non-negotiable standards guide every line of code we write and every decision we make.
             </p>
           </div>
@@ -105,11 +105,11 @@ export default function AboutPage() {
               const Icon = v.icon;
               return (
                 <div key={v.title} className="glow-card rounded-3xl p-6 sm:p-8 space-y-4 border border-white/10">
-                  <div className="h-12 w-12 rounded-2xl bg-white/5 border border-white/10 text-[#4F7CFF] flex items-center justify-center text-xl">
+                  <div className="h-12 w-12 rounded-2xl bg-white/5 border border-white/10 text-primary flex items-center justify-center text-xl">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-xl font-bold text-white font-display">{v.title}</h3>
-                  <p className="text-sm text-[#A7B0C5] leading-relaxed">{v.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
                 </div>
               );
             })}
@@ -118,11 +118,11 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 4: LIGHT CONVERSION BANNER */}
-      <section className="py-20 bg-[#F5F7FB] relative">
+      <section className="py-20 bg-light-section relative">
         <Container>
           <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-xl shadow-slate-900/5 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
             <div className="space-y-2 max-w-xl">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF] block">
+              <span className="text-xs font-bold uppercase tracking-widest text-primary block">
                 Let&apos;s Build Together
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 font-display">

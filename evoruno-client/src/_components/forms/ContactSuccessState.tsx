@@ -20,12 +20,12 @@ export function ContactSuccessState({ message, isLight = false }: ContactSuccess
       <h3 className={`text-2xl font-bold font-display ${isLight ? 'text-slate-900' : 'text-white'}`}>
         Inquiry Received!
       </h3>
-      <p className={`text-base max-w-lg mx-auto leading-relaxed ${isLight ? 'text-slate-600' : 'text-[#E2E8F0]'}`}>
+      <p className={`text-base max-w-lg mx-auto leading-relaxed ${isLight ? 'text-slate-600' : 'text-foreground'}`}>
         {message}
       </p>
-      <div className={`pt-4 text-xs ${isLight ? 'text-slate-500' : 'text-[#A7B0C5]'}`}>
+      <div className={`pt-4 text-xs ${isLight ? 'text-slate-500' : 'text-muted-foreground'}`}>
         Need immediate assistance? Email us directly at{' '}
-        <a href="mailto:contact@evoruno.com" className="text-[#4F7CFF] underline font-medium">
+        <a href="mailto:contact@evoruno.com" className="text-primary underline font-medium">
           contact@evoruno.com
         </a>
       </div>

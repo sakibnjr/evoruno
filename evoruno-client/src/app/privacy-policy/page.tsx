@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="relative overflow-hidden">
       {/* SECTION 1: DARK HEADER */}
-      <section className="pt-32 pb-16 bg-[#080B16] relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-background relative overflow-hidden">
         <Container size="narrow">
           <div className="space-y-4">
             <Badge variant="outline">
@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white font-display">
               Privacy Policy
             </h1>
-            <p className="text-xs font-medium uppercase tracking-wider text-[#A7B0C5]">
+            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Effective Date: {lastUpdated}
             </p>
           </div>
@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* SECTION 2: LIGHT READER SECTION */}
-      <section className="py-20 bg-[#F5F7FB] relative">
+      <section className="py-20 bg-light-section relative">
         <Container size="narrow">
           <div className="rounded-3xl p-8 sm:p-14 bg-white border border-slate-200 shadow-xl shadow-slate-900/5 space-y-8 text-slate-700 text-sm sm:text-base leading-relaxed">
             <section className="space-y-3">
@@ -90,7 +90,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <p>
                 To exercise these rights, please email us directly at{' '}
-                <a href="mailto:contact@evoruno.com" className="text-[#4F7CFF] underline font-medium">
+                <a href="mailto:contact@evoruno.com" className="text-primary underline font-medium">
                   contact@evoruno.com
                 </a>
                 .
@@ -107,7 +107,7 @@ export default function PrivacyPolicyPage() {
                 <div className="text-slate-500 text-sm">Dhaka, Bangladesh</div>
                 <div>
                   Email:{' '}
-                  <a href="mailto:contact@evoruno.com" className="text-[#4F7CFF] underline">
+                  <a href="mailto:contact@evoruno.com" className="text-primary underline">
                     contact@evoruno.com
                   </a>
                 </div>
@@ -118,9 +118,9 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* SECTION 3: DARK FOOTER CALLOUT */}
-      <section className="py-12 bg-[#080B16] border-t border-white/10 text-center">
+      <section className="py-12 bg-background border-t border-white/10 text-center">
         <Container size="narrow">
-          <Link href="/" className="text-sm text-[#4F7CFF] hover:underline font-medium">
+          <Link href="/" className="text-sm text-primary hover:underline font-medium">
             &larr; Return to Homepage
           </Link>
         </Container>

@@ -23,7 +23,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-[#A7B0C5] hover:text-white hover:bg-white/10 transition-all"
+              className="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-muted-foreground hover:text-white hover:bg-white/10 transition-all"
             >
               {link.label}
             </Link>

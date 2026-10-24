@@ -67,7 +67,7 @@ export default function RootLayout({
       <head>
         <JsonLd />
       </head>
-      <body className="min-h-screen bg-[#080B16] text-[#F5F7FF] font-sans antialiased flex flex-col selection:bg-[#4F7CFF]/30 selection:text-white">
+      <body className="min-h-screen bg-background text-foreground font-sans antialiased flex flex-col selection:bg-primary/30 selection:text-white">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -15,7 +15,7 @@ export function ProjectCard({ project, count }: ProjectCardProps) {
         {/* Left Column: Context, Challenge, Solution */}
         <div className="lg:col-span-7 space-y-6">
           <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-slate-500">
-            <span className="text-[#4F7CFF]">{count}</span>
+            <span className="text-primary">{count}</span>
             <span>•</span>
             <span className="text-slate-800">{project.category}</span>
             <span>•</span>
@@ -28,7 +28,7 @@ export function ProjectCard({ project, count }: ProjectCardProps) {
             )}
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-display group-hover:text-[#4F7CFF] transition-colors">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-display group-hover:text-primary transition-colors">
             {project.title}
           </h2>
 
@@ -97,7 +97,7 @@ export function ProjectCard({ project, count }: ProjectCardProps) {
             <div className="grid grid-cols-3 gap-3">
               {project.metrics.map((m) => (
                 <div key={m.label} className="p-3.5 rounded-xl bg-white border border-slate-200 text-center shadow-xs">
-                  <div className="text-base sm:text-xl font-bold text-[#4F7CFF] font-display">
+                  <div className="text-base sm:text-xl font-bold text-primary font-display">
                     {m.value}
                   </div>
                   <div className="text-[11px] font-medium text-slate-500 mt-1 truncate">{m.label}</div>
@@ -108,7 +108,7 @@ export function ProjectCard({ project, count }: ProjectCardProps) {
 
           <div className="text-xs text-slate-500 flex items-center justify-between pt-4 border-t border-slate-200">
             <span className="font-medium">100% Production Grade</span>
-            <span className="flex items-center gap-1 text-[#4F7CFF] font-semibold">
+            <span className="flex items-center gap-1 text-primary font-semibold">
               Live Architecture <FiExternalLink className="text-xs" />
             </span>
           </div>

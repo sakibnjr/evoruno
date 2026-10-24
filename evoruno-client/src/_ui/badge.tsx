@@ -1,18 +1,18 @@
-import * as React from 'react';
+import type { HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 
 export type BadgeVariant = 'default' | 'primary' | 'secondary' | 'accent' | 'outline';
 
-export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface BadgeProps extends HTMLAttributes<HTMLDivElement> {
   variant?: BadgeVariant;
 }
 
 const variantClasses: Record<BadgeVariant, string> = {
-  default: 'border-white/10 bg-white/5 text-[#A7B0C5]',
-  primary: 'border-[#4F7CFF]/40 bg-[#4F7CFF]/10 text-[#4F7CFF]',
-  secondary: 'border-[#7C5CFC]/40 bg-[#7C5CFC]/10 text-[#7C5CFC]',
-  accent: 'border-[#00E5FF]/40 bg-[#00E5FF]/10 text-[#00E5FF]',
-  outline: 'border-white/20 text-[#F5F7FF]',
+  default: 'border-border bg-white/5 text-muted-foreground',
+  primary: 'border-primary/40 bg-primary/10 text-primary',
+  secondary: 'border-secondary/40 bg-secondary/10 text-secondary',
+  accent: 'border-accent/40 bg-accent/10 text-accent',
+  outline: 'border-white/20 text-foreground',
 };
 
 export const badgeVariants = ({

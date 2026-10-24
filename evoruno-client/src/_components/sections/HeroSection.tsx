@@ -6,10 +6,10 @@ import { FiArrowRight } from 'react-icons/fi';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[95vh] flex flex-col justify-center pt-32 pb-20 overflow-hidden bg-[#080B16]">
+    <section className="relative min-h-[95vh] flex flex-col justify-center pt-32 pb-20 overflow-hidden bg-background">
       {/* Background Lighting Gradients */}
-      <div className="absolute top-1/4 left-1/4 w-[550px] h-[550px] bg-[#4F7CFF]/15 rounded-full blur-[170px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#7C5CFC]/15 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-[550px] h-[550px] bg-primary/15 rounded-full blur-[170px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/15 rounded-full blur-[160px] pointer-events-none" />
 
       {/* Subtle Grid Texture */}
       <div
@@ -25,7 +25,7 @@ export function HeroSection() {
           {/* Left Column: Authentic Brand Messaging & Action */}
           <div className="lg:col-span-6 space-y-6">
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-md">
-              <span className="h-2 w-2 rounded-full bg-[#00E5FF] animate-pulse" />
+              <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
               <span className="text-xs font-bold uppercase tracking-wider text-blue-200">
                 Bespoke Digital Product & Engineering Studio
               </span>
@@ -33,12 +33,12 @@ export function HeroSection() {
 
             <h1 className="text-4xl sm:text-6xl lg:text-[62px] font-bold text-white tracking-tight leading-[1.08] font-display">
               We engineer digital products that turn visitors into{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F7CFF] via-[#7C5CFC] to-[#00E5FF]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">
                 revenue.
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-[#A7B0C5] leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl">
               We design and build bespoke Next.js web applications, cross-platform mobile apps, and technical SEO architectures for ambitious businesses. Zero bloated templates. Zero technical debt.
             </p>
 
@@ -66,18 +66,18 @@ export function HeroSection() {
             </div>
 
             {/* Credibility & Guarantee Badges */}
-            <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 text-xs text-[#A7B0C5]">
+            <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 text-xs text-muted-foreground">
               <div className="space-y-1">
                 <div className="text-xl sm:text-2xl font-bold text-white font-display">&lt; 1.0s</div>
-                <div className="text-[11px] uppercase tracking-wider text-[#64748B]">Page Speed</div>
+                <div className="text-[11px] uppercase tracking-wider text-dim">Page Speed</div>
               </div>
               <div className="space-y-1">
                 <div className="text-xl sm:text-2xl font-bold text-white font-display">100%</div>
-                <div className="text-[11px] uppercase tracking-wider text-[#64748B]">Code Ownership</div>
+                <div className="text-[11px] uppercase tracking-wider text-dim">Code Ownership</div>
               </div>
               <div className="space-y-1">
                 <div className="text-xl sm:text-2xl font-bold text-white font-display">30-Day</div>
-                <div className="text-[11px] uppercase tracking-wider text-[#64748B]">Post-Launch SLA</div>
+                <div className="text-[11px] uppercase tracking-wider text-dim">Post-Launch SLA</div>
               </div>
             </div>
           </div>

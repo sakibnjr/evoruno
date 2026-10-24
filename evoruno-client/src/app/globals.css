@@ -17,23 +17,33 @@
     --border-glow: rgba(79, 124, 255, 0.4);
     --light-section: #F5F7FB;
     --light-section-text: #080B16;
+    --dim: #64748B;
+    --panel-dark: #0E1324;
+    --teal: #00A3BF;
+    --electric-blue: #1040FF;
   }
 }
 
 @theme {
-  --color-canvas-bg: #080B16;
-  --color-surface-card: #101629;
-  --color-surface-elevated: #172038;
-  --color-surface-light: #F5F7FB;
-
-  --color-accent-blue: #4F7CFF;
-  --color-accent-violet: #7C5CFC;
-  --color-accent-cyan: #00E5FF;
-
-  --color-text-main: #F5F7FF;
-  --color-text-subtle: #A7B0C5;
-  --color-text-dim: #64748B;
-  --color-text-dark: #080B16;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-border-glow: var(--border-glow);
+  --color-light-section: var(--light-section);
+  --color-light-section-text: var(--light-section-text);
+  --color-dim: var(--dim);
+  --color-panel-dark: var(--panel-dark);
+  --color-teal: var(--teal);
+  --color-electric-blue: var(--electric-blue);
 
   --radius-card: 16px;
   --radius-pill: 9999px;

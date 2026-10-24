@@ -9,12 +9,12 @@ export function Logo({ className = '', showWordmark = true }: LogoProps) {
   return (
     <Link
       href="/"
-      className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F7CFF] rounded-lg ${className}`}
+      className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg ${className}`}
       aria-label="Evoruno Home"
     >
       {/* Dynamic Geometric Mark */}
       <div className="relative w-8 h-8 flex items-center justify-center">
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-[#4F7CFF] to-[#7C5CFC] opacity-80 group-hover:opacity-100 blur-[2px] transition-opacity" />
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-primary to-secondary opacity-80 group-hover:opacity-100 blur-[2px] transition-opacity" />
         <svg
           viewBox="0 0 32 32"
           fill="none"
@@ -49,7 +49,7 @@ export function Logo({ className = '', showWordmark = true }: LogoProps) {
       </div>
 
       {showWordmark && (
-        <span className="font-display font-bold text-lg tracking-wider text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-[#A7B0C5] transition-all">
+        <span className="font-display font-bold text-lg tracking-wider text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-muted-foreground transition-all">
           EVORUNO
         </span>
       )}

@@ -15,8 +15,8 @@ export default function MobileAppDevelopmentPage() {
   return (
     <div className="relative overflow-hidden">
       {/* SECTION 1: DARK HERO */}
-      <section className="pt-32 pb-20 bg-[#080B16] relative overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#7C5CFC]/15 rounded-full blur-[160px] pointer-events-none" />
+      <section className="pt-32 pb-20 bg-background relative overflow-hidden">
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/15 rounded-full blur-[160px] pointer-events-none" />
 
         <Container>
           <div className="max-w-3xl space-y-4">
@@ -27,7 +27,7 @@ export default function MobileAppDevelopmentPage() {
             <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-white font-display">
               Intuitive mobile applications that keep customers connected to your business.
             </h1>
-            <p className="text-base sm:text-lg text-[#A7B0C5] leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
               Reach your customers wherever they are. We engineer high-performance iOS and Android mobile apps that combine fluid 60 FPS interfaces, reliable offline sync, and enterprise-grade security.
             </p>
             <div className="pt-4 flex flex-wrap gap-4">
@@ -48,12 +48,12 @@ export default function MobileAppDevelopmentPage() {
       </section>
 
       {/* SECTION 2: LIGHT FEATURES & SCOPE */}
-      <section className="py-24 bg-[#F5F7FB] relative">
+      <section className="py-24 bg-light-section relative">
         <Container>
           {/* 3 Pillar Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             <div className="rounded-3xl p-8 bg-white border border-slate-200/90 shadow-lg shadow-slate-900/5 space-y-4">
-              <div className="h-12 w-12 rounded-2xl bg-purple-50 text-[#7C5CFC] flex items-center justify-center text-xl">
+              <div className="h-12 w-12 rounded-2xl bg-purple-50 text-secondary flex items-center justify-center text-xl">
                 <FiActivity />
               </div>
               <h3 className="text-xl font-bold text-slate-900 font-display">60 FPS Native Performance</h3>
@@ -63,7 +63,7 @@ export default function MobileAppDevelopmentPage() {
             </div>
 
             <div className="rounded-3xl p-8 bg-white border border-slate-200/90 shadow-lg shadow-slate-900/5 space-y-4">
-              <div className="h-12 w-12 rounded-2xl bg-blue-50 text-[#4F7CFF] flex items-center justify-center text-xl">
+              <div className="h-12 w-12 rounded-2xl bg-blue-50 text-primary flex items-center justify-center text-xl">
                 <FiShield />
               </div>
               <h3 className="text-xl font-bold text-slate-900 font-display">Biometric & Data Security</h3>
@@ -73,7 +73,7 @@ export default function MobileAppDevelopmentPage() {
             </div>
 
             <div className="rounded-3xl p-8 bg-white border border-slate-200/90 shadow-lg shadow-slate-900/5 space-y-4">
-              <div className="h-12 w-12 rounded-2xl bg-cyan-50 text-[#00A3BF] flex items-center justify-center text-xl">
+              <div className="h-12 w-12 rounded-2xl bg-cyan-50 text-teal flex items-center justify-center text-xl">
                 <FiSmartphone />
               </div>
               <h3 className="text-xl font-bold text-slate-900 font-display">Unified Codebase Savings</h3>
@@ -86,7 +86,7 @@ export default function MobileAppDevelopmentPage() {
           {/* Deliverables Breakdown */}
           <div className="rounded-3xl p-8 sm:p-12 bg-white border border-slate-200 shadow-xl shadow-slate-900/5">
             <div className="max-w-2xl mb-8 space-y-1">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF] block">
+              <span className="text-xs font-bold uppercase tracking-widest text-primary block">
                 Deliverables & Capabilities
               </span>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-display">
@@ -116,18 +116,18 @@ export default function MobileAppDevelopmentPage() {
       </section>
 
       {/* SECTION 3: DARK CONVERSION CALLOUT */}
-      <section className="py-24 bg-[#080B16] relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#7C5CFC]/15 rounded-full blur-[140px] pointer-events-none" />
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-secondary/15 rounded-full blur-[140px] pointer-events-none" />
 
         <Container>
-          <div className="p-8 sm:p-14 rounded-3xl bg-gradient-to-r from-[#101629] to-[#172038] border border-white/10 text-center space-y-6 shadow-2xl relative z-10 max-w-4xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#00E5FF]">
+          <div className="p-8 sm:p-14 rounded-3xl bg-gradient-to-r from-card to-muted border border-white/10 text-center space-y-6 shadow-2xl relative z-10 max-w-4xl mx-auto">
+            <span className="text-xs font-bold uppercase tracking-widest text-accent">
               Turn Your App Concept Into Reality
             </span>
             <h3 className="text-3xl sm:text-4xl font-bold text-white font-display">
               Have an app idea to scale your business?
             </h3>
-            <p className="text-base sm:text-lg text-[#A7B0C5] max-w-xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
               Let&apos;s validate your technical architecture, review budget requirements, and map out a clean milestone launch plan.
             </p>
             <div className="pt-2">

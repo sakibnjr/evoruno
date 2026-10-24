@@ -6,19 +6,19 @@ import { FiCheck, FiArrowRight, FiLayers } from 'react-icons/fi';
 
 export function SolutionSection() {
   return (
-    <section className="bg-[#F5F7FB] text-[#080B16] py-24 sm:py-32 relative overflow-hidden transition-colors border-t border-slate-200/60">
+    <section className="bg-light-section text-light-section-text py-24 sm:py-32 relative overflow-hidden transition-colors border-t border-slate-200/60">
       <Container>
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-[#4F7CFF] text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-primary text-xs font-semibold uppercase tracking-wider">
               <FiLayers className="h-3.5 w-3.5" />
               Our Solutions
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#080B16] font-display">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-light-section-text font-display">
               Custom digital solutions designed to grow your business.
             </h2>
-            <p className="text-base sm:text-lg text-[#475569] leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               We combine modern visual design with rock-solid software engineering to give your company an unfair advantage online.
             </p>
           </div>
@@ -52,21 +52,21 @@ export function SolutionSection() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF]">
+                    <span className="text-xs font-bold uppercase tracking-widest text-primary">
                       0{index + 1} {'//'} Service
                     </span>
                     {isFeatured && (
-                      <span className="px-3 py-1 rounded-full bg-blue-50 text-[#4F7CFF] text-[11px] font-bold tracking-wider uppercase border border-blue-200">
+                      <span className="px-3 py-1 rounded-full bg-blue-50 text-primary text-[11px] font-bold tracking-wider uppercase border border-blue-200">
                         Most Requested
                       </span>
                     )}
                   </div>
 
-                  <h3 className="text-2xl font-bold text-[#080B16] font-display mb-3 group-hover:text-[#4F7CFF] transition-colors">
+                  <h3 className="text-2xl font-bold text-slate-900 font-display mb-3 group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
 
-                  <p className="text-sm text-[#475569] leading-relaxed mb-6">
+                  <p className="text-sm text-slate-600 leading-relaxed mb-6">
                     {service.shortDesc}
                   </p>
 
@@ -74,7 +74,7 @@ export function SolutionSection() {
                   <div className="space-y-3 py-6 border-t border-b border-slate-100 my-6">
                     {service.deliverables.slice(0, 4).map((item) => (
                       <div key={item} className="flex items-start gap-2.5 text-xs font-medium text-slate-700">
-                        <FiCheck className="h-4 w-4 text-[#4F7CFF] shrink-0 mt-0.5" />
+                        <FiCheck className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
                     ))}
@@ -84,8 +84,8 @@ export function SolutionSection() {
                   <div className="grid grid-cols-3 gap-2 text-center py-2 mb-6">
                     {service.metrics.map((m) => (
                       <div key={m.label} className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/60">
-                        <div className="text-base font-bold text-[#080B16] font-display">{m.value}</div>
-                        <div className="text-[10px] text-[#64748B] mt-0.5 truncate">{m.label}</div>
+                        <div className="text-base font-bold text-slate-900 font-display">{m.value}</div>
+                        <div className="text-[10px] text-dim mt-0.5 truncate">{m.label}</div>
                       </div>
                     ))}
                   </div>
@@ -99,8 +99,8 @@ export function SolutionSection() {
                       size="default"
                       className={`w-full rounded-full ${
                         isFeatured
-                          ? 'bg-[#4F7CFF] text-white hover:bg-[#3D6CEF]'
-                          : 'bg-[#080B16] text-white hover:bg-slate-800'
+                          ? 'bg-primary text-white hover:brightness-110'
+                          : 'bg-background text-white hover:bg-slate-800'
                       }`}
                     >
                       Learn More About {service.title}

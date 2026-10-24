@@ -14,7 +14,7 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
       {/* Left Column: Context & Action */}
       <div className="lg:col-span-6 space-y-6">
         <div className="flex items-center gap-3">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF]">
+          <span className="text-xs font-bold uppercase tracking-widest text-primary">
             0{index + 1} {'//'} Solution
           </span>
           <div className="h-px flex-1 bg-slate-200" />
@@ -24,7 +24,7 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
           {service.title}
         </h3>
 
-        <p className="text-sm font-semibold text-[#4F7CFF] uppercase tracking-wider">
+        <p className="text-sm font-semibold text-primary uppercase tracking-wider">
           {service.tagline}
         </p>
 

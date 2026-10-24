@@ -4,7 +4,7 @@ export function ContactDirectDetails() {
   return (
     <div className="lg:col-span-5 space-y-6">
       <div>
-        <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF] block mb-2">
+        <span className="text-xs font-bold uppercase tracking-widest text-primary block mb-2">
           Direct Inquiries
         </span>
         <h2 className="text-3xl font-bold text-slate-900 font-display">
@@ -18,7 +18,7 @@ export function ContactDirectDetails() {
       {/* Direct Details Cards */}
       <div className="space-y-4 pt-2">
         <div className="rounded-2xl p-6 bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
-          <div className="h-11 w-11 rounded-xl bg-blue-50 text-[#4F7CFF] flex items-center justify-center shrink-0">
+          <div className="h-11 w-11 rounded-xl bg-blue-50 text-primary flex items-center justify-center shrink-0">
             <FiMail className="h-5 w-5" />
           </div>
           <div>
@@ -27,7 +27,7 @@ export function ContactDirectDetails() {
             </div>
             <a
               href="mailto:contact@evoruno.com"
-              className="text-base font-bold text-slate-900 hover:text-[#4F7CFF] transition-colors"
+              className="text-base font-bold text-slate-900 hover:text-primary transition-colors"
             >
               contact@evoruno.com
             </a>
@@ -38,7 +38,7 @@ export function ContactDirectDetails() {
         </div>
 
         <div className="rounded-2xl p-6 bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
-          <div className="h-11 w-11 rounded-xl bg-purple-50 text-[#7C5CFC] flex items-center justify-center shrink-0">
+          <div className="h-11 w-11 rounded-xl bg-purple-50 text-secondary flex items-center justify-center shrink-0">
             <FiClock className="h-5 w-5" />
           </div>
           <div>
@@ -55,7 +55,7 @@ export function ContactDirectDetails() {
         </div>
 
         <div className="rounded-2xl p-6 bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
-          <div className="h-11 w-11 rounded-xl bg-cyan-50 text-[#00A3BF] flex items-center justify-center shrink-0">
+          <div className="h-11 w-11 rounded-xl bg-cyan-50 text-teal flex items-center justify-center shrink-0">
             <FiMapPin className="h-5 w-5" />
           </div>
           <div>
@@ -79,15 +79,15 @@ export function ContactDirectDetails() {
         </h3>
         <ul className="space-y-2 text-xs text-slate-700">
           <li className="flex items-center gap-2">
-            <FiCheckCircle className="text-[#4F7CFF] shrink-0" />
+            <FiCheckCircle className="text-primary shrink-0" />
             <span>We review your requirements and target timeline.</span>
           </li>
           <li className="flex items-center gap-2">
-            <FiCheckCircle className="text-[#4F7CFF] shrink-0" />
+            <FiCheckCircle className="text-primary shrink-0" />
             <span>We prepare preliminary technical ideas and budget ranges.</span>
           </li>
           <li className="flex items-center gap-2">
-            <FiCheckCircle className="text-[#4F7CFF] shrink-0" />
+            <FiCheckCircle className="text-primary shrink-0" />
             <span>We schedule a zero-pressure 15-minute introductory video call.</span>
           </li>
         </ul>

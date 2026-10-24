@@ -28,7 +28,7 @@ export function AgencyComparisonTable() {
     <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
       <div>
         <div className="flex items-center justify-between mb-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF]">
+          <span className="text-xs font-bold uppercase tracking-widest text-primary">
             Clear Advantage
           </span>
           <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">

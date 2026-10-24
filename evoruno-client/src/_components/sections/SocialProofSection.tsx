@@ -23,18 +23,18 @@ const techStacks = [
 
 export function SocialProofSection() {
   return (
-    <section className="bg-[#F5F7FB] text-[#080B16] py-24 sm:py-32 relative overflow-hidden transition-colors border-t border-slate-200/80">
+    <section className="bg-light-section text-light-section-text py-24 sm:py-32 relative overflow-hidden transition-colors border-t border-slate-200/80">
       <Container>
         {/* Section Header */}
         <div className="max-w-3xl mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-[#4F7CFF] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100 text-primary text-xs font-bold uppercase tracking-wider">
             <FiAward className="h-3.5 w-3.5" />
             The Evoruno Standard
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#080B16] font-display">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-light-section-text font-display">
             Why growing companies choose Evoruno over generic agencies.
           </h2>
-          <p className="text-base sm:text-lg text-[#475569] leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
             Most agencies sell slow, fragile template sites that burden your business with endless plugin breakages and vendor lock-in. We build bespoke software platforms engineered for speed, conversion, and long-term asset value.
           </p>
         </div>
@@ -47,7 +47,7 @@ export function SocialProofSection() {
           {/* Right Column (5 cols): Speed & Conversion (Electric Blue Card) */}
           <div className="lg:col-span-5 flex flex-col gap-8 justify-between">
             {/* Card 2: Electric Blue Speed Card */}
-            <div className="bg-[#1040FF] text-white rounded-3xl p-8 sm:p-10 shadow-xl shadow-blue-500/20 flex flex-col justify-between flex-1">
+            <div className="bg-electric-blue text-white rounded-3xl p-8 sm:p-10 shadow-xl shadow-blue-500/20 flex flex-col justify-between flex-1">
               <div>
                 <div className="text-xs font-bold uppercase tracking-wider text-blue-200">
                   Google Core Web Vitals
@@ -80,7 +80,7 @@ export function SocialProofSection() {
                 <div className="text-3xl font-extrabold text-slate-900 font-display">99.99%</div>
                 <p className="text-xs text-slate-600">Continuous monitoring & zero server panics.</p>
               </div>
-              <div className="h-12 w-12 rounded-2xl bg-blue-50 text-[#4F7CFF] flex items-center justify-center shrink-0">
+              <div className="h-12 w-12 rounded-2xl bg-blue-50 text-primary flex items-center justify-center shrink-0">
                 <FiShield className="h-6 w-6" />
               </div>
             </div>
@@ -99,9 +99,9 @@ export function SocialProofSection() {
               return (
                 <div
                   key={tech.name}
-                  className="flex items-center justify-center gap-2.5 p-4 rounded-2xl bg-white border border-slate-200 shadow-xs text-slate-800 hover:text-[#4F7CFF] hover:border-blue-300 transition-all text-xs font-semibold"
+                  className="flex items-center justify-center gap-2.5 p-4 rounded-2xl bg-white border border-slate-200 shadow-xs text-slate-800 hover:text-primary hover:border-blue-300 transition-all text-xs font-semibold"
                 >
-                  <Icon className="h-4 w-4 shrink-0 text-[#4F7CFF]" />
+                  <Icon className="h-4 w-4 shrink-0 text-primary" />
                   <span>{tech.name}</span>
                 </div>
               );

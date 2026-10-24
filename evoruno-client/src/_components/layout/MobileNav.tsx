@@ -39,7 +39,7 @@ export function MobileNav({ navLinks }: MobileNavProps) {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-[280px] bg-[#0E1324] border-l border-white/10 p-6 flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-out ${
+        className={`fixed top-0 right-0 z-50 h-full w-[280px] bg-panel-dark border-l border-white/10 p-6 flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -62,7 +62,7 @@ export function MobileNav({ navLinks }: MobileNavProps) {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="px-4 py-3 rounded-xl text-base font-medium text-[#A7B0C5] hover:text-white hover:bg-white/5 transition-colors"
+                className="px-4 py-3 rounded-xl text-base font-medium text-muted-foreground hover:text-white hover:bg-white/5 transition-colors"
               >
                 {link.label}
               </Link>

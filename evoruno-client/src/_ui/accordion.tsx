@@ -1,6 +1,14 @@
 'use client';
 
-import * as React from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  type HTMLAttributes,
+  type ButtonHTMLAttributes,
+  type ReactNode,
+} from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { cn } from '@/lib/utils';
 
@@ -9,13 +17,13 @@ interface AccordionContextType {
   toggleItem: (value: string) => void;
 }
 
-const AccordionContext = React.createContext<AccordionContextType | undefined>(undefined);
+const AccordionContext = createContext<AccordionContextType | undefined>(undefined);
 
-interface AccordionProps extends React.HTMLAttributes<HTMLDivElement> {
+interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
   type?: 'single';
   collapsible?: boolean;
   defaultValue?: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 function Accordion({
@@ -25,9 +33,9 @@ function Accordion({
   className,
   ...props
 }: AccordionProps) {
-  const [openItem, setOpenItem] = React.useState<string | null>(defaultValue ?? null);
+  const [openItem, setOpenItem] = useState<string | null>(defaultValue ?? null);
 
-  const toggleItem = React.useCallback(
+  const toggleItem = useCallback(
     (value: string) => {
       setOpenItem((prev) => (prev === value ? (collapsible ? null : prev) : value));
     },
@@ -43,17 +51,17 @@ function Accordion({
   );
 }
 
-interface AccordionItemProps extends React.HTMLAttributes<HTMLDivElement> {
+interface AccordionItemProps extends HTMLAttributes<HTMLDivElement> {
   value: string;
 }
 
-const AccordionItemContext = React.createContext<{ value: string; isOpen: boolean }>({
+const AccordionItemContext = createContext<{ value: string; isOpen: boolean }>({
   value: '',
   isOpen: false,
 });
 
 function AccordionItem({ value, className, children, ...props }: AccordionItemProps) {
-  const context = React.useContext(AccordionContext);
+  const context = useContext(AccordionContext);
   if (!context) {
     throw new Error('AccordionItem must be used within an Accordion');
   }
@@ -77,9 +85,9 @@ function AccordionTrigger({
   className,
   children,
   ...props
-}: React.ButtonHTMLAttributes<HTMLButtonElement>) {
-  const accordionContext = React.useContext(AccordionContext);
-  const itemContext = React.useContext(AccordionItemContext);
+}: ButtonHTMLAttributes<HTMLButtonElement>) {
+  const accordionContext = useContext(AccordionContext);
+  const itemContext = useContext(AccordionItemContext);
 
   if (!accordionContext || !itemContext) {
     throw new Error('AccordionTrigger must be used within AccordionItem');
@@ -94,7 +102,7 @@ function AccordionTrigger({
       aria-expanded={isOpen}
       data-state={isOpen ? 'open' : 'closed'}
       className={cn(
-        'flex w-full items-center justify-between py-5 text-left font-medium text-inherit transition-all hover:text-[#4F7CFF] cursor-pointer text-base md:text-lg',
+        'flex w-full items-center justify-between py-5 text-left font-medium text-inherit transition-all hover:text-primary cursor-pointer text-base md:text-lg',
         className
       )}
       {...props}
@@ -103,7 +111,7 @@ function AccordionTrigger({
       <FiChevronDown
         className={cn(
           'h-5 w-5 shrink-0 opacity-60 transition-transform duration-300 ease-out',
-          isOpen && 'rotate-180 text-[#4F7CFF] opacity-100'
+          isOpen && 'rotate-180 text-primary opacity-100'
         )}
       />
     </button>
@@ -114,8 +122,8 @@ function AccordionContent({
   className,
   children,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
-  const itemContext = React.useContext(AccordionItemContext);
+}: HTMLAttributes<HTMLDivElement>) {
+  const itemContext = useContext(AccordionItemContext);
   if (!itemContext) {
     throw new Error('AccordionContent must be used within AccordionItem');
   }

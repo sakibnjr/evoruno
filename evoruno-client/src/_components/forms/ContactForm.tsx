@@ -21,15 +21,15 @@ export function ContactForm({ variant = 'dark' }: ContactFormProps) {
 
   const labelClass = isLight
     ? 'block text-xs font-semibold uppercase tracking-wider text-slate-700'
-    : 'block text-xs font-semibold uppercase tracking-wider text-[#A7B0C5]';
+    : 'block text-xs font-semibold uppercase tracking-wider text-muted-foreground';
 
   const inputClass = isLight
-    ? 'w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#4F7CFF] focus:bg-white focus:ring-1 focus:ring-[#4F7CFF] transition-all'
-    : 'w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF] transition-all';
+    ? 'w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-primary focus:bg-white focus:ring-1 focus:ring-primary transition-all'
+    : 'w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all';
 
   const selectClass = isLight
-    ? 'w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 focus:outline-none focus:border-[#4F7CFF] focus:bg-white focus:ring-1 focus:ring-[#4F7CFF] transition-all'
-    : 'w-full px-4 py-3.5 rounded-xl bg-[#101629] border border-white/10 text-white focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF] transition-all';
+    ? 'w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 focus:outline-none focus:border-primary focus:bg-white focus:ring-1 focus:ring-primary transition-all'
+    : 'w-full px-4 py-3.5 rounded-xl bg-card border border-white/10 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all';
 
   if (state.success) {
     return <ContactSuccessState message={state.message} isLight={isLight} />;
@@ -52,7 +52,7 @@ export function ContactForm({ variant = 'dark' }: ContactFormProps) {
         {/* Name */}
         <div className="space-y-2">
           <label htmlFor="name" className={labelClass}>
-            Full Name <span className="text-[#4F7CFF]">*</span>
+            Full Name <span className="text-primary">*</span>
           </label>
           <input id="name" name="name" type="text" required placeholder="e.g. Alex Rahman" className={inputClass} />
           {state.fieldErrors?.name && <p className="text-xs text-red-500">{state.fieldErrors.name[0]}</p>}
@@ -61,7 +61,7 @@ export function ContactForm({ variant = 'dark' }: ContactFormProps) {
         {/* Email */}
         <div className="space-y-2">
           <label htmlFor="email" className={labelClass}>
-            Email Address <span className="text-[#4F7CFF]">*</span>
+            Email Address <span className="text-primary">*</span>
           </label>
           <input id="email" name="email" type="email" required placeholder="alex@company.com" className={inputClass} />
           {state.fieldErrors?.email && <p className="text-xs text-red-500">{state.fieldErrors.email[0]}</p>}
@@ -78,7 +78,7 @@ export function ContactForm({ variant = 'dark' }: ContactFormProps) {
         {/* Service Selection */}
         <div className="space-y-2">
           <label htmlFor="service" className={labelClass}>
-            Primary Service Needed <span className="text-[#4F7CFF]">*</span>
+            Primary Service Needed <span className="text-primary">*</span>
           </label>
           <select id="service" name="service" defaultValue="website" className={selectClass}>
             <option value="website">Website & Web App Development</option>
@@ -104,7 +104,7 @@ export function ContactForm({ variant = 'dark' }: ContactFormProps) {
       {/* Message */}
       <div className="space-y-2">
         <label htmlFor="message" className={labelClass}>
-          Tell Us About Your Goals & Project <span className="text-[#4F7CFF]">*</span>
+          Tell Us About Your Goals & Project <span className="text-primary">*</span>
         </label>
         <textarea
           id="message"
