@@ -21,13 +21,13 @@ export function SocialProofSection() {
         <div className="max-w-2xl mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-[#4F7CFF] text-xs font-semibold uppercase tracking-wider mb-3">
             <FiCpu className="h-3.5 w-3.5" />
-            Proof of Capability
+            Proven Business Results
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#080B16] font-display">
-            Built for performance, engineered for growth.
+            Built for growth, engineered to win clients.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
-            We don&apos;t build disposable templates. Every digital platform we deploy adheres to strict engineering benchmarks, verifiable performance audits, and high-conversion UX.
+            We don’t build generic, cookie-cutter templates. Every website and app we launch is engineered to load in the blink of an eye, build instant trust, and maximize customer conversions.
           </p>
         </div>
 
@@ -40,17 +40,17 @@ export function SocialProofSection() {
                 <FiShield className="h-6 w-6" />
               </div>
               <h3 className="text-2xl font-bold text-[#080B16] font-display">
-                Zero Tech Compromises
+                Zero Technical Headaches
               </h3>
               <p className="text-sm text-[#64748B] leading-relaxed">
-                Clean, modular TypeScript architectures designed for long-term maintainability. No bloated page builders or vendor lock-in.
+                Clean, reliable software architecture that you truly own. No bloated WordPress plugins, no unexpected site crashes, and no recurring security panics.
               </p>
             </div>
 
             <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
               <div>
                 <div className="text-3xl font-extrabold text-[#080B16]">100%</div>
-                <div className="text-xs text-[#64748B] mt-0.5 font-medium">Type-Safe Clean Code</div>
+                <div className="text-xs text-[#64748B] mt-0.5 font-medium">Source Code Ownership</div>
               </div>
               <span className="h-8 w-8 rounded-full bg-green-50 text-green-600 flex items-center justify-center">
                 <FiCheckCircle className="h-4 w-4" />
@@ -61,12 +61,12 @@ export function SocialProofSection() {
           {/* Card 2: Reliability & Testimonial Metric (4 cols) */}
           <div className="md:col-span-12 lg:col-span-4 bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-[#64748B]">Commitment to Uptime</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-[#64748B]">Commitment to Reliability</div>
               <div className="text-5xl font-black text-[#080B16] tracking-tight mt-2 font-display">
                 99.99%
               </div>
               <p className="text-sm text-[#475569] mt-4 italic leading-relaxed">
-                &ldquo;Evoruno transformed our sluggish web presence into an ultra-fast digital sales platform. Our mobile engagement jumped within two weeks of launch.&rdquo;
+                &ldquo;Evoruno completely revamped our online presence. Our mobile customer inquiries more than doubled within the first month after going live.&rdquo;
               </p>
             </div>
 
@@ -83,23 +83,23 @@ export function SocialProofSection() {
                 </div>
               </div>
               <div className="text-xs text-[#64748B]">
-                <strong className="text-[#080B16] block">Verified Client Feedback</strong>
-                Continuous production support
+                <strong className="text-[#080B16] block">Client Partnership</strong>
+                Continuous post-launch support
               </div>
             </div>
           </div>
 
-          {/* Card 3: Deep Electric-Blue Highlight Card (4 cols - Reference Frame 3) */}
+          {/* Card 3: Deep Electric-Blue Highlight Card (4 cols) */}
           <div className="md:col-span-12 lg:col-span-4 bg-[#1040FF] text-white rounded-3xl p-8 shadow-xl shadow-blue-500/20 flex flex-col justify-between">
             <div>
               <div className="text-xs font-semibold uppercase tracking-wider text-blue-200">
-                Core Web Vitals
+                Lightning Fast Speed
               </div>
               <div className="text-5xl sm:text-6xl font-black tracking-tight mt-2 font-display">
                 &lt; 1.0s
               </div>
               <p className="text-sm text-blue-100 mt-4 leading-relaxed">
-                Optimized server components and edge rendering ensure rapid First Contentful Paint and flawless Core Web Vitals on mobile networks.
+                Sub-second loading times mean your prospective clients never get tired of waiting. Faster pages directly drive higher Google rankings and more inquiries.
               </p>
             </div>
 
@@ -109,7 +109,7 @@ export function SocialProofSection() {
                 Lighthouse Grade: 100/100
               </div>
               <Link href="/services/seo" className="text-xs text-white underline hover:text-blue-100">
-                Audit Standards &rarr;
+                SEO Standards &rarr;
               </Link>
             </div>
           </div>
@@ -118,7 +118,7 @@ export function SocialProofSection() {
         {/* Technology Marquee Strip */}
         <div className="mt-16 pt-12 border-t border-slate-200/80">
           <p className="text-xs font-semibold uppercase tracking-widest text-center text-[#64748B] mb-8">
-            Powering Next-Generation Digital Experiences With
+            Built on Industry-Standard Modern Technologies
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center">
@@ -145,7 +145,7 @@ export function SocialProofSection() {
               size="lg"
               className="rounded-full border-slate-300 text-slate-800 hover:bg-slate-100"
             >
-              Explore Full Capabilities
+              Explore Our Full Capabilities
               <FiArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>

@@ -19,11 +19,11 @@ export function FinalCtaSection() {
             </div>
 
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white font-display leading-[1.1]">
-              Ready to Build What&apos;s Next?
+              Ready to win more clients online?
             </h2>
 
             <p className="text-base sm:text-xl text-[#A7B0C5] leading-relaxed max-w-2xl mx-auto">
-              Tell us about your idea, your business, or the technical challenge you&apos;re trying to solve. Let&apos;s explore the right digital solution for you.
+              Tell us about your business goals or the challenges you’re facing. We’ll review your project and get back to you with actionable ideas and transparent pricing within 24 hours.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -50,12 +50,12 @@ export function FinalCtaSection() {
             <div className="pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-xs text-[#64748B]">
               <span className="flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
-                Inquiries reviewed in 24 business hours
+                Replies within 24 business hours
               </span>
               <span>•</span>
-              <span>Fixed-price milestone contracts</span>
+              <span>Fixed milestone pricing, zero hidden costs</span>
               <span>•</span>
-              <span>Direct engineer communication</span>
+              <span>Direct engineer & strategist support</span>
             </div>
           </div>
         </div>

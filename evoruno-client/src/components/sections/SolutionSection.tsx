@@ -1,36 +1,35 @@
 import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { servicesData } from '@/content/services';
 import { FiCheck, FiArrowRight, FiLayers } from 'react-icons/fi';
 
 export function SolutionSection() {
   return (
-    <section className="bg-[#080B16] text-[#F5F7FF] py-24 sm:py-32 relative overflow-hidden border-t border-white/5">
-      {/* Background radial lighting */}
-      <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-[#4F7CFF]/10 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#7C5CFC]/10 rounded-full blur-[140px] pointer-events-none" />
-
+    <section className="bg-[#F5F7FB] text-[#080B16] py-24 sm:py-32 relative overflow-hidden transition-colors border-t border-slate-200/60">
       <Container>
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl space-y-4">
-            <Badge variant="primary">
-              <FiLayers className="mr-1.5 h-3.5 w-3.5" />
-              What We Deliver
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-display">
-              Bespoke digital engineering designed to scale.
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-[#4F7CFF] text-xs font-semibold uppercase tracking-wider">
+              <FiLayers className="h-3.5 w-3.5" />
+              Our Solutions
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[#080B16] font-display">
+              Custom digital solutions designed to grow your business.
             </h2>
-            <p className="text-base sm:text-lg text-[#A7B0C5] leading-relaxed">
-              We bridge visionary design with bulletproof software engineering to turn your digital presence into your strongest competitive advantage.
+            <p className="text-base sm:text-lg text-[#475569] leading-relaxed">
+              We combine modern visual design with rock-solid software engineering to give your company an unfair advantage online.
             </p>
           </div>
 
           <div>
             <Link href="/services">
-              <Button variant="outline" size="lg" className="rounded-full">
+              <Button
+                variant="outline"
+                size="lg"
+                className="rounded-full border-slate-300 text-slate-800 hover:bg-slate-100"
+              >
                 View All Services
                 <FiArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -38,45 +37,44 @@ export function SolutionSection() {
           </div>
         </div>
 
-        {/* 3 Interactive Service Cards */}
+        {/* 3 Interactive Service Cards in Light Mode */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => {
             const isFeatured = index === 0;
             return (
               <div
                 key={service.id}
-                className={`glow-card rounded-3xl p-8 flex flex-col justify-between relative group ${
-                  isFeatured ? 'border-[#4F7CFF]/40 bg-gradient-to-b from-[#101629] to-[#0A0E1F]' : ''
+                className={`bg-white rounded-3xl p-8 sm:p-10 border transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1 hover:shadow-xl ${
+                  isFeatured
+                    ? 'border-blue-400 shadow-md ring-1 ring-blue-400/30'
+                    : 'border-slate-200/80 shadow-sm'
                 }`}
               >
-                {/* Glow Border Indicator */}
-                <div className="absolute -top-px left-8 right-8 h-px bg-gradient-to-r from-transparent via-[#4F7CFF]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF]">
                       0{index + 1} {'//'} Service
                     </span>
                     {isFeatured && (
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#4F7CFF]/20 text-[#4F7CFF] text-[10px] font-bold tracking-wider uppercase border border-[#4F7CFF]/30">
-                        Popular
+                      <span className="px-3 py-1 rounded-full bg-blue-50 text-[#4F7CFF] text-[11px] font-bold tracking-wider uppercase border border-blue-200">
+                        Most Requested
                       </span>
                     )}
                   </div>
 
-                  <h3 className="text-2xl font-bold text-white font-display mb-3 group-hover:text-[#4F7CFF] transition-colors">
+                  <h3 className="text-2xl font-bold text-[#080B16] font-display mb-3 group-hover:text-[#4F7CFF] transition-colors">
                     {service.title}
                   </h3>
 
-                  <p className="text-sm text-[#A7B0C5] leading-relaxed mb-6">
+                  <p className="text-sm text-[#475569] leading-relaxed mb-6">
                     {service.shortDesc}
                   </p>
 
                   {/* Deliverables Checklist */}
-                  <div className="space-y-2.5 py-6 border-t border-b border-white/5 my-6">
+                  <div className="space-y-3 py-6 border-t border-b border-slate-100 my-6">
                     {service.deliverables.slice(0, 4).map((item) => (
-                      <div key={item} className="flex items-start gap-2.5 text-xs text-[#E2E8F0]">
-                        <FiCheck className="h-4 w-4 text-[#00E5FF] shrink-0 mt-0.5" />
+                      <div key={item} className="flex items-start gap-2.5 text-xs font-medium text-slate-700">
+                        <FiCheck className="h-4 w-4 text-[#4F7CFF] shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
                     ))}
@@ -85,9 +83,9 @@ export function SolutionSection() {
                   {/* Metrics Badge Row */}
                   <div className="grid grid-cols-3 gap-2 text-center py-2 mb-6">
                     {service.metrics.map((m) => (
-                      <div key={m.label} className="p-2 rounded-xl bg-white/5 border border-white/5">
-                        <div className="text-sm font-bold text-white font-display">{m.value}</div>
-                        <div className="text-[10px] text-[#A7B0C5] mt-0.5 truncate">{m.label}</div>
+                      <div key={m.label} className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/60">
+                        <div className="text-base font-bold text-[#080B16] font-display">{m.value}</div>
+                        <div className="text-[10px] text-[#64748B] mt-0.5 truncate">{m.label}</div>
                       </div>
                     ))}
                   </div>
@@ -97,11 +95,15 @@ export function SolutionSection() {
                 <div className="pt-2">
                   <Link href={`/services/${service.slug}`} className="block w-full">
                     <Button
-                      variant={isFeatured ? 'primary' : 'secondary'}
+                      variant={isFeatured ? 'primary' : 'default'}
                       size="default"
-                      className="w-full rounded-full group-hover:shadow-[0_0_20px_rgba(79,124,255,0.3)]"
+                      className={`w-full rounded-full ${
+                        isFeatured
+                          ? 'bg-[#4F7CFF] text-white hover:bg-[#3D6CEF]'
+                          : 'bg-[#080B16] text-white hover:bg-slate-800'
+                      }`}
                     >
-                      Explore {service.title}
+                      Learn More About {service.title}
                       <FiArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>

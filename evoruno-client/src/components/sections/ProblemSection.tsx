@@ -6,29 +6,29 @@ import { FiAlertCircle, FiSmartphone, FiSearch, FiZapOff } from 'react-icons/fi'
 const problems = [
   {
     icon: FiZapOff,
-    tag: 'Friction & Speed',
-    title: 'Sluggish Sites Losing Customers',
+    tag: 'Customer Drop-Off',
+    title: 'Losing Inquiries to Slow Speeds',
     description:
-      'Over 50% of mobile visitors abandon a website that takes longer than 3 seconds to load. Legacy templates and bloated plugins quietly throttle your conversion rate and kill user trust.',
-    impact: 'Elevated bounce rates and wasted ad spend',
+      'Over 53% of mobile visitors abandon a website if it takes longer than 3 seconds to load. Clunky templates and slow loading quietly cost your business thousands in lost sales every month.',
+    impact: 'High bounce rate and wasted advertising budgets',
     accentColor: '#EF4444',
   },
   {
     icon: FiSmartphone,
     tag: 'Mobile Experience',
-    title: 'Clunky, Non-Responsive Interfaces',
+    title: 'Frustrating, Clunky Mobile Views',
     description:
-      'Desktop designs clumsily shrunk down to smartphone screens cause frustration, broken navigation, and misaligned buttons—driving away high-intent prospects on mobile devices.',
-    impact: 'Damaged brand perception and lost inbound leads',
+      'More than 65% of your customers visit from smartphones. Broken buttons, awkward text scaling, and pinching-to-zoom instantly make your business look amateur and push clients to competitors.',
+    impact: 'Lost mobile leads and diminished brand credibility',
     accentColor: '#F59E0B',
   },
   {
     icon: FiSearch,
-    tag: 'Search Visibility',
-    title: 'Completely Invisible on Google',
+    tag: 'Lost Sales',
+    title: 'Invisible to Customers on Google',
     description:
-      'A beautiful website means nothing if search engines cannot index it. Missing structured data, slow server responses, and poor crawl architectures keep businesses buried on page 5.',
-    impact: 'Zero organic inbound traffic and total reliance on paid ads',
+      'A beautiful website means nothing if prospective clients can’t find it. Outdated code, missing structured data, and poor crawl architectures keep your business buried where no one looks.',
+    impact: 'Zero organic inbound leads and high reliance on paid ads',
     accentColor: '#8B5CF6',
   },
 ];
@@ -45,13 +45,13 @@ export function ProblemSection() {
         <div className="max-w-2xl mx-auto text-center mb-16 space-y-4">
           <Badge variant="outline" className="border-red-500/30 text-red-400 bg-red-500/10">
             <FiAlertCircle className="mr-1.5 h-3.5 w-3.5" />
-            The Growth Bottlenecks
+            The Real Business Cost
           </Badge>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-display">
-            Is your digital presence holding your business back?
+            Is an outdated digital presence costing you customers?
           </h2>
           <p className="text-base sm:text-lg text-[#A7B0C5] leading-relaxed">
-            Most business websites suffer from invisible technical flaws that sabotage conversions long before a customer ever reaches out.
+            Most business websites suffer from silent technical bottlenecks that turn away high-intent prospects before they ever get in touch.
           </p>
         </div>
 
@@ -91,7 +91,7 @@ export function ProblemSection() {
                 <CardContent className="pt-4 border-t border-white/5">
                   <div className="text-xs font-medium text-red-300/90 flex items-center gap-1.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
-                    Bottleneck: {prob.impact}
+                    Business Impact: {prob.impact}
                   </div>
                 </CardContent>
               </Card>

@@ -8,51 +8,51 @@ export interface Faq {
 export const faqsData: Faq[] = [
   {
     id: 'services-overview',
-    question: 'What core services does Evoruno provide?',
+    question: 'How can Evoruno help my business grow?',
     answer:
-      'Evoruno specializes in three core disciplines: custom modern website development (using Next.js and TypeScript), cross-platform mobile application development (iOS and Android), and technical SEO/performance optimization designed to maximize organic visibility and search indexing.',
+      'We help businesses grow in three distinct ways: by building fast, professional websites that convert more visitors into paying customers; creating intuitive mobile apps that keep your audience engaged; and optimizing your Google search visibility so new leads discover you organically every single month.',
     category: 'General',
   },
   {
     id: 'pricing-model',
-    question: 'How do you price website and app development projects?',
+    question: 'How do you price projects, and are there any hidden fees?',
     answer:
-      'We price projects based on transparent scopes and architectural complexity rather than vague hourly estimates. Following our initial Discovery audit, we provide a detailed proposal with fixed milestone tiers so there are no unexpected budget surprises.',
+      'We believe in 100% price transparency. After an initial discovery audit of your business goals, we provide a clear, fixed-price proposal broken into deliverables and milestone stages. You know the exact investment and scope upfront—zero surprise charges or hidden hourly inflation.',
     category: 'Process',
   },
   {
     id: 'turnaround-time',
-    question: 'What is the typical timeline for delivering a website or web app?',
+    question: 'How long does it take from our first call to a live launch?',
     answer:
-      'Standard high-performance business websites typically launch within 3 to 5 weeks. More complex web applications, client portals, or cross-platform mobile apps generally take 6 to 10 weeks depending on custom integrations and feature scope. Every project includes a concrete timeline roadmap.',
+      'A standard, high-converting business website typically launches within 3 to 4 weeks. More comprehensive web portals or full mobile applications generally take 6 to 8 weeks. We provide a week-by-week roadmap so you always know where your project stands.',
     category: 'Development',
   },
   {
     id: 'redesign-legacy',
-    question: 'Can you redesign or improve an existing, outdated website?',
+    question: 'Can you redesign and modernize our current outdated website?',
     answer:
-      'Yes. We regularly audit and modernize outdated websites. We migrate existing legacy codebases to modern frameworks like Next.js, elevating visual aesthetics to match high-end industry standards while preserving historical SEO value through careful 301 redirect mapping.',
+      'Yes. Many of our clients come to us with slow, outdated websites that are hurting their sales. We completely refresh your brand image, optimize the mobile user flow, and migrate your site to modern technology while carefully preserving your existing search traffic and customer links.',
     category: 'Development',
   },
   {
     id: 'ongoing-maintenance',
-    question: 'Do you offer ongoing post-launch maintenance and technical support?',
+    question: 'What happens after our website or app goes live?',
     answer:
-      'Absolutely. Every project includes 30 days of post-launch stabilization support. Afterward, we offer structured maintenance retainers covering security updates, framework upgrades, performance monitoring, and continuous feature enhancements.',
+      'We don’t just launch your project and disappear. Every project includes 30 days of complimentary post-launch support and monitoring. Beyond that, we offer simple monthly maintenance retainers covering security updates, continuous speed optimization, and ongoing feature updates.',
     category: 'General',
   },
   {
     id: 'seo-guarantee',
-    question: 'Do you guarantee #1 rankings on Google search results?',
+    question: 'Will our website show up on Google search?',
     answer:
-      'No ethical agency or engineering firm can guarantee a #1 Google ranking, as search engine algorithms are proprietary and dynamic. What we do guarantee is 100% technically sound search architecture: perfect crawlability, zero indexation errors, valid JSON-LD structured schemas, and green Core Web Vitals.',
+      'Yes. Every website we build includes technical SEO directly in the code: fast load speeds, mobile friendliness, clean meta tags, and structured data that Google favors. While no honest agency can guarantee a #1 spot overnight, we set you up with the exact technical foundation needed to outrank slower competitors.',
     category: 'SEO',
   },
   {
     id: 'get-started',
-    question: 'How do we begin a project with Evoruno?',
+    question: 'How do we take the first step together?',
     answer:
-      'Getting started is straightforward. Submit an inquiry through our contact form with a brief summary of your goals. Our team will review your requirements and schedule an introductory discovery conversation within 24 business hours.',
+      'Simply send us a message through our contact form. Tell us a little about your business and what you want to achieve. An engineer from our team will personally get back to you within 24 business hours with initial ideas and next steps—no pressure, no aggressive sales pitch.',
     category: 'Process',
   },
 ];

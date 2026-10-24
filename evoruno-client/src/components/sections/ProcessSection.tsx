@@ -6,29 +6,29 @@ const steps = [
   {
     number: '01',
     title: 'Discover',
-    tagline: 'Audit & Objective Mapping',
-    desc: 'We analyze your business model, customer pain points, and competitors. Together we define concrete success metrics and deliverables.',
+    tagline: 'Understand & Strategize',
+    desc: 'We start by understanding your business model, ideal customers, and sales goals. Together, we define clear project deliverables and measurable outcomes.',
     icon: FiCompass,
   },
   {
     number: '02',
     title: 'Plan',
-    tagline: 'Architecture & UX Wireframing',
-    desc: 'We map out the system architecture, component hierarchies, database schemas, and intuitive responsive user flows before writing code.',
+    tagline: 'Blueprint & Fixed Pricing',
+    desc: 'You receive a complete visual wireframe, architecture blueprint, and transparent fixed milestone pricing—so you know exactly what is being built and when.',
     icon: FiGitBranch,
   },
   {
     number: '03',
     title: 'Build',
-    tagline: 'Precision Engineering & QA',
-    desc: 'We craft high-performance code with TypeScript, Next.js, and Tailwind CSS, subjecting every component to rigorous cross-device testing.',
+    tagline: 'Agile Development & Demos',
+    desc: 'We craft your platform using modern Next.js and TypeScript, testing across real smartphones and computers with regular live preview links for your feedback.',
     icon: FiCode,
   },
   {
     number: '04',
-    title: 'Launch & Support',
-    tagline: 'Zero-Downtime Deployment',
-    desc: 'We deploy to edge CDN networks, verify search engine crawlability, submit sitemaps, and provide 30-day post-launch optimization support.',
+    title: 'Launch & Grow',
+    tagline: 'Smooth Launch & Support',
+    desc: 'We manage full domain deployment, verify Google search crawlability, and provide 30 days of dedicated post-launch support to ensure total peace of mind.',
     icon: FiSend,
   },
 ];
@@ -40,13 +40,13 @@ export function ProcessSection() {
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center mb-20 space-y-4">
           <Badge variant="secondary">
-            Engagement Flow
+            Stress-Free Partnership
           </Badge>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-display">
-            How we bring ideas to life.
+            How we bring your vision to life.
           </h2>
           <p className="text-base sm:text-lg text-[#A7B0C5] leading-relaxed">
-            A battle-tested 4-step framework that eliminates guesswork, minimizes delays, and guarantees production-grade reliability.
+            A simple, predictable 4-step process that eliminates guesswork, avoids costly delays, and keeps you in full control every step of the way.
           </p>
         </div>
 

@@ -10,23 +10,48 @@ const initialState: ActionResponse = {
   message: '',
 };
 
-export function ContactForm() {
+interface ContactFormProps {
+  variant?: 'dark' | 'light';
+}
+
+export function ContactForm({ variant = 'dark' }: ContactFormProps) {
   const [state, formAction, isPending] = useActionState(submitContactForm, initialState);
+  const isLight = variant === 'light';
+
+  const labelClass = isLight
+    ? 'block text-xs font-semibold uppercase tracking-wider text-slate-700'
+    : 'block text-xs font-semibold uppercase tracking-wider text-[#A7B0C5]';
+
+  const inputClass = isLight
+    ? 'w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#4F7CFF] focus:bg-white focus:ring-1 focus:ring-[#4F7CFF] transition-all'
+    : 'w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF] transition-all';
+
+  const selectClass = isLight
+    ? 'w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 focus:outline-none focus:border-[#4F7CFF] focus:bg-white focus:ring-1 focus:ring-[#4F7CFF] transition-all'
+    : 'w-full px-4 py-3.5 rounded-xl bg-[#101629] border border-white/10 text-white focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF] transition-all';
 
   return (
     <div className="w-full">
       {state.success ? (
-        <div className="rounded-3xl border border-green-500/30 bg-green-500/10 p-8 sm:p-12 text-center space-y-4 animate-in fade-in zoom-in duration-300">
-          <div className="h-16 w-16 rounded-full bg-green-500/20 text-green-400 mx-auto flex items-center justify-center text-3xl">
+        <div
+          className={
+            isLight
+              ? 'rounded-3xl border border-green-500/40 bg-green-50 p-8 sm:p-12 text-center space-y-4 animate-in fade-in zoom-in duration-300'
+              : 'rounded-3xl border border-green-500/30 bg-green-500/10 p-8 sm:p-12 text-center space-y-4 animate-in fade-in zoom-in duration-300'
+          }
+        >
+          <div className="h-16 w-16 rounded-full bg-green-500/20 text-green-600 mx-auto flex items-center justify-center text-3xl">
             <FiCheckCircle />
           </div>
-          <h3 className="text-2xl font-bold text-white font-display">Inquiry Received!</h3>
-          <p className="text-base text-[#E2E8F0] max-w-lg mx-auto leading-relaxed">
+          <h3 className={`text-2xl font-bold font-display ${isLight ? 'text-slate-900' : 'text-white'}`}>
+            Inquiry Received!
+          </h3>
+          <p className={`text-base max-w-lg mx-auto leading-relaxed ${isLight ? 'text-slate-600' : 'text-[#E2E8F0]'}`}>
             {state.message}
           </p>
-          <div className="pt-4 text-xs text-[#A7B0C5]">
+          <div className={`pt-4 text-xs ${isLight ? 'text-slate-500' : 'text-[#A7B0C5]'}`}>
             Need immediate assistance? Email us directly at{' '}
-            <a href="mailto:contact@evoruno.com" className="text-[#4F7CFF] underline">
+            <a href="mailto:contact@evoruno.com" className="text-[#4F7CFF] underline font-medium">
               contact@evoruno.com
             </a>
           </div>
@@ -44,7 +69,7 @@ export function ContactForm() {
 
           {/* Error Banner */}
           {state.message && !state.success && (
-            <div className="p-4 rounded-xl border border-red-500/40 bg-red-500/10 text-red-300 text-sm flex items-center gap-2">
+            <div className="p-4 rounded-xl border border-red-500/40 bg-red-500/10 text-red-600 text-sm flex items-center gap-2">
               <FiAlertCircle className="h-4 w-4 shrink-0" />
               <span>{state.message}</span>
             </div>
@@ -53,7 +78,7 @@ export function ContactForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Name */}
             <div className="space-y-2">
-              <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-[#A7B0C5]">
+              <label htmlFor="name" className={labelClass}>
                 Full Name <span className="text-[#4F7CFF]">*</span>
               </label>
               <input
@@ -62,16 +87,16 @@ export function ContactForm() {
                 type="text"
                 required
                 placeholder="e.g. Alex Rahman"
-                className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF] transition-all"
+                className={inputClass}
               />
               {state.fieldErrors?.name && (
-                <p className="text-xs text-red-400">{state.fieldErrors.name[0]}</p>
+                <p className="text-xs text-red-500">{state.fieldErrors.name[0]}</p>
               )}
             </div>
 
             {/* Email */}
             <div className="space-y-2">
-              <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-[#A7B0C5]">
+              <label htmlFor="email" className={labelClass}>
                 Email Address <span className="text-[#4F7CFF]">*</span>
               </label>
               <input
@@ -80,10 +105,10 @@ export function ContactForm() {
                 type="email"
                 required
                 placeholder="alex@company.com"
-                className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF] transition-all"
+                className={inputClass}
               />
               {state.fieldErrors?.email && (
-                <p className="text-xs text-red-400">{state.fieldErrors.email[0]}</p>
+                <p className="text-xs text-red-500">{state.fieldErrors.email[0]}</p>
               )}
             </div>
           </div>
@@ -91,7 +116,7 @@ export function ContactForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Company */}
             <div className="space-y-2">
-              <label htmlFor="company" className="block text-xs font-semibold uppercase tracking-wider text-[#A7B0C5]">
+              <label htmlFor="company" className={labelClass}>
                 Company / Organization (Optional)
               </label>
               <input
@@ -99,20 +124,20 @@ export function ContactForm() {
                 name="company"
                 type="text"
                 placeholder="e.g. Apex Health"
-                className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF] transition-all"
+                className={inputClass}
               />
             </div>
 
             {/* Service Selection */}
             <div className="space-y-2">
-              <label htmlFor="service" className="block text-xs font-semibold uppercase tracking-wider text-[#A7B0C5]">
+              <label htmlFor="service" className={labelClass}>
                 Primary Service Needed <span className="text-[#4F7CFF]">*</span>
               </label>
               <select
                 id="service"
                 name="service"
                 defaultValue="website"
-                className="w-full px-4 py-3.5 rounded-xl bg-[#101629] border border-white/10 text-white focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF] transition-all"
+                className={selectClass}
               >
                 <option value="website">Website & Web App Development</option>
                 <option value="mobile-app">Mobile Application (iOS / Android)</option>
@@ -120,21 +145,21 @@ export function ContactForm() {
                 <option value="other">Full-Stack Digital Transformation / Other</option>
               </select>
               {state.fieldErrors?.service && (
-                <p className="text-xs text-red-400">{state.fieldErrors.service[0]}</p>
+                <p className="text-xs text-red-500">{state.fieldErrors.service[0]}</p>
               )}
             </div>
           </div>
 
           {/* Budget Tier */}
           <div className="space-y-2">
-            <label htmlFor="budget" className="block text-xs font-semibold uppercase tracking-wider text-[#A7B0C5]">
+            <label htmlFor="budget" className={labelClass}>
               Estimated Project Budget (USD or equivalent BDT)
             </label>
             <select
               id="budget"
               name="budget"
               defaultValue="standard"
-              className="w-full px-4 py-3.5 rounded-xl bg-[#101629] border border-white/10 text-white focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF] transition-all"
+              className={selectClass}
             >
               <option value="$1,000 - $3,000">$1,000 — $3,000 (MVP / Startup Website)</option>
               <option value="$3,000 - $8,000">$3,000 — $8,000 (Complete Platform / Custom Web App)</option>
@@ -145,7 +170,7 @@ export function ContactForm() {
 
           {/* Message */}
           <div className="space-y-2">
-            <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-[#A7B0C5]">
+            <label htmlFor="message" className={labelClass}>
               Tell Us About Your Goals & Project <span className="text-[#4F7CFF]">*</span>
             </label>
             <textarea
@@ -154,10 +179,10 @@ export function ContactForm() {
               rows={5}
               required
               placeholder="What are you building? What problems are you trying to solve? Do you have an existing site or timeline?"
-              className="w-full px-4 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF] transition-all leading-relaxed"
+              className={`${inputClass} leading-relaxed`}
             />
             {state.fieldErrors?.message && (
-              <p className="text-xs text-red-400">{state.fieldErrors.message[0]}</p>
+              <p className="text-xs text-red-500">{state.fieldErrors.message[0]}</p>
             )}
           </div>
 
@@ -168,7 +193,7 @@ export function ContactForm() {
               disabled={isPending}
               variant="default"
               size="lg"
-              className="w-full rounded-full shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.5)] group"
+              className="w-full rounded-full shadow-lg hover:shadow-xl group"
             >
               {isPending ? (
                 <span className="flex items-center gap-2">

@@ -13,7 +13,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn('border-b border-white/10 last:border-b-0 py-1', className)}
+    className={cn('border-b border-slate-200/80 last:border-b-0 py-1', className)}
     {...props}
   />
 ));
@@ -27,13 +27,13 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        'flex flex-1 items-center justify-between py-5 text-left font-medium text-white transition-all hover:text-[#4F7CFF] [&[data-state=open]>svg]:rotate-180 cursor-pointer text-base md:text-lg',
+        'flex flex-1 items-center justify-between py-5 text-left font-medium text-inherit transition-all hover:text-[#4F7CFF] [&[data-state=open]>svg]:rotate-180 cursor-pointer text-base md:text-lg',
         className
       )}
       {...props}
     >
       {children}
-      <FiChevronDown className="h-5 w-5 shrink-0 text-[#A7B0C5] transition-transform duration-300 ease-out" />
+      <FiChevronDown className="h-5 w-5 shrink-0 opacity-60 transition-transform duration-300 ease-out" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
@@ -45,10 +45,10 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm text-[#A7B0C5] leading-relaxed transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className="overflow-hidden text-sm leading-relaxed transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
-    <div className={cn('pb-5 pt-1 text-sm md:text-base leading-relaxed', className)}>{children}</div>
+    <div className={cn('pb-5 pt-1 text-sm md:text-base leading-relaxed text-[#475569]', className)}>{children}</div>
   </AccordionPrimitive.Content>
 ));
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
