@@ -26,7 +26,7 @@ export const projectsData: Project[] = [
     summary: 'A modern digital finance platform that lets businesses manage cash flow, track client payments, and process invoices in real time.',
     challenge: 'The client was losing high-value users because their previous portal was slow, confusing to navigate, and frequently crashed on mobile phones.',
     solution: 'We engineered a lightning-fast, secure Next.js web application with intuitive navigation, automated statements, and sub-second transaction dashboards.',
-    technologies: ['Next.js App Router', 'TypeScript', 'Tailwind CSS', 'GSAP', 'PostgreSQL'],
+    technologies: ['Next.js App Router', 'TypeScript', 'Tailwind CSS v4', 'PostgreSQL'],
     metrics: [
       { label: 'Page Load Speed', value: '1.1s' },
       { label: 'User Retention', value: '+68%' },

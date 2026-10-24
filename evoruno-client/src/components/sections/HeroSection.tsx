@@ -1,9 +1,7 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/layout/Container';
 import {
@@ -17,33 +15,10 @@ import {
 } from 'react-icons/fi';
 
 export function HeroSection() {
-  const containerRef = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState<'performance' | 'architecture' | 'mobile'>('performance');
-
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-
-      tl.from('.hero-badge', { opacity: 0, y: 15, duration: 0.5 })
-        .from('.hero-headline', { opacity: 0, y: 30, duration: 0.7 }, '-=0.2')
-        .from('.hero-sub', { opacity: 0, y: 20, duration: 0.6 }, '-=0.3')
-        .from('.hero-cta-group', { opacity: 0, y: 20, duration: 0.6 }, '-=0.3')
-        .from('.hero-showcase', { opacity: 0, scale: 0.94, y: 30, duration: 0.8 }, '-=0.5');
-
-      gsap.to('.hero-float-card', {
-        y: 8,
-        duration: 4,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-      });
-    },
-    { scope: containerRef }
-  );
 
   return (
     <section
-      ref={containerRef}
       className="relative min-h-[95vh] flex flex-col justify-center pt-32 pb-20 overflow-hidden bg-[#080B16]"
     >
       {/* Background Lighting Gradients */}
@@ -123,7 +98,7 @@ export function HeroSection() {
 
           {/* Right Column: Interactive Digital Product Showcase (MetaLab / Unfold Studio Quality) */}
           <div className="lg:col-span-6 lg:pl-6 hero-showcase">
-            <div className="hero-float-card rounded-3xl border border-white/15 bg-gradient-to-b from-[#101629]/90 to-[#080B16]/95 backdrop-blur-xl p-5 sm:p-7 shadow-2xl relative overflow-hidden">
+            <div className="animate-float-card rounded-3xl border border-white/15 bg-gradient-to-b from-[#101629]/90 to-[#080B16]/95 backdrop-blur-xl p-5 sm:p-7 shadow-2xl relative overflow-hidden">
               {/* Window Header */}
               <div className="flex items-center justify-between pb-4 border-b border-white/10">
                 <div className="flex items-center gap-2">

@@ -28,7 +28,7 @@ export const servicesData: ServiceDetail[] = [
       'Easy-to-Manage Content Architecture',
       'Google Analytics & Conversion Tracking Setup',
     ],
-    techStack: ['Next.js App Router', 'TypeScript', 'Tailwind CSS', 'React 19', 'GSAP', 'Node.js'],
+    techStack: ['Next.js App Router', 'TypeScript', 'Tailwind CSS v4', 'React 19', 'Node.js', 'REST APIs'],
     outcomes: [
       'Visitors stay on your site longer without bouncing due to slow load times',
       'Seamless buying or inquiry experience on smartphones, tablets, and laptops',

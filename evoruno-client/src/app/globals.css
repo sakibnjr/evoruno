@@ -94,6 +94,20 @@ body {
   box-shadow: 0 0 80px 20px rgba(79, 124, 255, 0.4), 0 0 140px 60px rgba(124, 92, 252, 0.3);
 }
 
+/* Pure CSS Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-card {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
