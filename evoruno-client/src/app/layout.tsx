@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
-import './globals.css';
-import { Navbar } from '@/components/layout/Navbar';
-import { Footer } from '@/components/layout/Footer';
+import '@/app/globals.css';
+import { Navbar } from '@/_components/layout/Navbar';
+import { Footer } from '@/_components/layout/Footer';
+import { JsonLd } from '@/_components/seo/JsonLd';
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -56,8 +57,6 @@ export const metadata: Metadata = {
   },
 };
 
-import { OrganizationJsonLd, WebSiteJsonLd } from '@/components/seo/JsonLd';
-
 export default function RootLayout({
   children,
 }: {
@@ -66,8 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plusJakarta.variable} ${inter.variable} dark scroll-smooth`}>
       <head>
-        <OrganizationJsonLd />
-        <WebSiteJsonLd />
+        <JsonLd />
       </head>
       <body className="min-h-screen bg-[#080B16] text-[#F5F7FF] font-sans antialiased flex flex-col selection:bg-[#4F7CFF]/30 selection:text-white">
         <Navbar />

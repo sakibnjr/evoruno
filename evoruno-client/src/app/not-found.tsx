@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Container } from '@/components/layout/Container';
-import { Button } from '@/components/ui/button';
+import { Container } from '@/_components/layout/Container';
+import { Button } from '@/_ui/button';
 import { FiArrowLeft } from 'react-icons/fi';
 
 export default function NotFound() {

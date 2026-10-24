@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Container } from '@/components/layout/Container';
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
+import { Container } from '@/_components/layout/Container';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/_ui/accordion';
 import { faqsData } from '@/content/faqs';
 import { FiHelpCircle, FiArrowRight } from 'react-icons/fi';
 

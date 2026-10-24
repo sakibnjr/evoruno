@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Container } from '@/components/layout/Container';
-import { Badge } from '@/components/ui/badge';
+import { Container } from '@/_components/layout/Container';
+import { Badge } from '@/_ui/badge';
 import { FiShield } from 'react-icons/fi';
 
 export const metadata: Metadata = {

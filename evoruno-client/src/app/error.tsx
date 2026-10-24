@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
-import { Container } from '@/components/layout/Container';
-import { Button } from '@/components/ui/button';
+import { Container } from '@/_components/layout/Container';
+import { Button } from '@/_ui/button';
 import { FiRefreshCw, FiAlertTriangle } from 'react-icons/fi';
 
 export default function ErrorPage({

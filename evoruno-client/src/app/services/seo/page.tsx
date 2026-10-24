@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Container } from '@/components/layout/Container';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { Container } from '@/_components/layout/Container';
+import { Badge } from '@/_ui/badge';
+import { Button } from '@/_ui/button';
 import { FiCheck, FiArrowRight, FiSearch, FiTrendingUp, FiCpu } from 'react-icons/fi';
 
 export const metadata: Metadata = {

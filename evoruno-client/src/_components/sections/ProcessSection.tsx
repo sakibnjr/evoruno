@@ -1,5 +1,5 @@
-import { Container } from '@/components/layout/Container';
-import { Badge } from '@/components/ui/badge';
+import { Container } from '@/_components/layout/Container';
+import { Badge } from '@/_ui/badge';
 import { FiGitBranch, FiCompass, FiCode, FiSend } from 'react-icons/fi';
 
 const steps = [
@@ -39,9 +39,7 @@ export function ProcessSection() {
       <Container>
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center mb-20 space-y-4">
-          <Badge variant="secondary">
-            Stress-Free Partnership
-          </Badge>
+          <Badge variant="secondary">Stress-Free Partnership</Badge>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-display">
             How we bring your vision to life.
           </h2>
@@ -52,7 +50,6 @@ export function ProcessSection() {
 
         {/* 4-Step Connected Horizontal Timeline */}
         <div className="relative">
-          {/* Luminous Connector Line (Desktop) */}
           <div className="hidden lg:block absolute top-1/2 left-8 right-8 h-0.5 bg-gradient-to-r from-[#4F7CFF]/20 via-[#7C5CFC]/40 to-[#00E5FF]/20 -translate-y-12 z-0" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
@@ -64,7 +61,6 @@ export function ProcessSection() {
                   className="glow-card rounded-3xl p-8 flex flex-col justify-between relative group hover:border-[#4F7CFF]/40"
                 >
                   <div>
-                    {/* Step Number & Icon */}
                     <div className="flex items-center justify-between mb-8">
                       <span className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#A7B0C5] font-display">
                         {step.number}

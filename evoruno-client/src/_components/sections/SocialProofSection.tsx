@@ -1,14 +1,8 @@
 import Link from 'next/link';
-import { Container } from '@/components/layout/Container';
-import { Button } from '@/components/ui/button';
-import {
-  FiCheckCircle,
-  FiXCircle,
-  FiTrendingUp,
-  FiShield,
-  FiArrowRight,
-  FiAward,
-} from 'react-icons/fi';
+import { Container } from '@/_components/layout/Container';
+import { Button } from '@/_ui/button';
+import { AgencyComparisonTable } from '@/_components/sections/AgencyComparisonTable';
+import { FiTrendingUp, FiShield, FiArrowRight, FiAward } from 'react-icons/fi';
 import {
   SiNextdotjs,
   SiReact,
@@ -47,79 +41,8 @@ export function SocialProofSection() {
 
         {/* Bento Grid Layout (Bespoke Agency Level) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          {/* Card 1 (7 cols): The Comparison Matrix */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow">
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF]">
-                  Clear Advantage
-                </span>
-                <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-200">
-                  Zero Technical Debt
-                </span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 font-display mb-6">
-                How We Compare
-              </h3>
-
-              {/* Comparison Rows */}
-              <div className="space-y-4 text-xs sm:text-sm">
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-center">
-                  <div className="sm:col-span-4 font-bold text-slate-700">Page Load Speed</div>
-                  <div className="sm:col-span-4 text-slate-500 flex items-center gap-1.5 line-through">
-                    <FiXCircle className="text-red-500 shrink-0" />
-                    4s – 7s (Slow templates)
-                  </div>
-                  <div className="sm:col-span-4 text-slate-900 font-bold flex items-center gap-1.5 text-emerald-700">
-                    <FiCheckCircle className="text-emerald-600 shrink-0" />
-                    &lt; 1.0s (Sub-Second RSC)
-                  </div>
-                </div>
-
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-center">
-                  <div className="sm:col-span-4 font-bold text-slate-700">Code & IP Ownership</div>
-                  <div className="sm:col-span-4 text-slate-500 flex items-center gap-1.5 line-through">
-                    <FiXCircle className="text-red-500 shrink-0" />
-                    Vendor Lock-in
-                  </div>
-                  <div className="sm:col-span-4 text-slate-900 font-bold flex items-center gap-1.5 text-emerald-700">
-                    <FiCheckCircle className="text-emerald-600 shrink-0" />
-                    100% Client Ownership
-                  </div>
-                </div>
-
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-center">
-                  <div className="sm:col-span-4 font-bold text-slate-700">Architecture</div>
-                  <div className="sm:col-span-4 text-slate-500 flex items-center gap-1.5 line-through">
-                    <FiXCircle className="text-red-500 shrink-0" />
-                    Bloated plugins & PHP
-                  </div>
-                  <div className="sm:col-span-4 text-slate-900 font-bold flex items-center gap-1.5 text-emerald-700">
-                    <FiCheckCircle className="text-emerald-600 shrink-0" />
-                    Next.js 16 + TypeScript
-                  </div>
-                </div>
-
-                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-center">
-                  <div className="sm:col-span-4 font-bold text-slate-700">Communication</div>
-                  <div className="sm:col-span-4 text-slate-500 flex items-center gap-1.5 line-through">
-                    <FiXCircle className="text-red-500 shrink-0" />
-                    Junior account reps
-                  </div>
-                  <div className="sm:col-span-4 text-slate-900 font-bold flex items-center gap-1.5 text-emerald-700">
-                    <FiCheckCircle className="text-emerald-600 shrink-0" />
-                    Direct Senior Engineers
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-              <span>Standard for all client engagements</span>
-              <span className="font-semibold text-slate-800">No recurring hidden costs</span>
-            </div>
-          </div>
+          {/* Card 1 (7 cols): Extracted Comparison Table */}
+          <AgencyComparisonTable />
 
           {/* Right Column (5 cols): Speed & Conversion (Electric Blue Card) */}
           <div className="lg:col-span-5 flex flex-col gap-8 justify-between">

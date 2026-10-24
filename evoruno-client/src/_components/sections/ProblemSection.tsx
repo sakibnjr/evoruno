@@ -1,6 +1,6 @@
-import { Container } from '@/components/layout/Container';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import { Container } from '@/_components/layout/Container';
+import { Badge } from '@/_ui/badge';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/_ui/card';
 import { FiAlertCircle, FiSmartphone, FiSearch, FiZapOff } from 'react-icons/fi';
 
 const problems = [

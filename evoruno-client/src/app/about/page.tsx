@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Container } from '@/components/layout/Container';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { FiTarget, FiHeart, FiCode, FiUsers, FiArrowRight, FiCheckCircle } from 'react-icons/fi';
+import { Container } from '@/_components/layout/Container';
+import { Badge } from '@/_ui/badge';
+import { Button } from '@/_ui/button';
+import { QualityGuaranteesCard } from '@/_components/cards/QualityGuaranteesCard';
+import { FiTarget, FiHeart, FiCode, FiUsers, FiArrowRight } from 'react-icons/fi';
 
 export const metadata: Metadata = {
   title: 'About Us | Engineering & Business Philosophy | Evoruno',
@@ -34,16 +35,11 @@ const values = [
   },
 ];
 
-export function generateStaticParams() {
-  return [];
-}
-
 export default function AboutPage() {
   return (
     <div className="relative overflow-hidden">
       {/* SECTION 1: DARK HERO */}
       <section className="pt-32 pb-20 bg-[#080B16] relative overflow-hidden">
-        {/* Glow Effects */}
         <div className="absolute top-1/4 right-1/3 w-[500px] h-[500px] bg-[#4F7CFF]/15 rounded-full blur-[160px] pointer-events-none" />
 
         <Container>
@@ -83,34 +79,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right Column: Working Standards Card */}
-            <div className="lg:col-span-6">
-              <div className="rounded-3xl p-8 sm:p-10 bg-white border border-slate-200 shadow-xl shadow-slate-900/5 space-y-6">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#4F7CFF] block mb-1">
-                    Zero Compromises
-                  </span>
-                  <h3 className="text-2xl font-bold text-slate-900 font-display">
-                    Our Quality Guarantees
-                  </h3>
-                </div>
-
-                <div className="space-y-4">
-                  {[
-                    '100% Type-Safe TypeScript & Next.js App Router',
-                    'Sub-2-second Largest Contentful Paint target on all mobile devices',
-                    '100% Complete Source Code Ownership with zero licensing lock-in',
-                    'Direct communication with senior engineers—no junior account managers',
-                    'Transparent milestone pricing with zero hidden fees or surprise invoices',
-                  ].map((item) => (
-                    <div key={item} className="flex items-start gap-3 text-sm text-slate-700">
-                      <FiCheckCircle className="h-5 w-5 text-[#4F7CFF] shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            {/* Right Column: Extracted Working Standards Card */}
+            <QualityGuaranteesCard />
           </div>
         </Container>
       </section>
